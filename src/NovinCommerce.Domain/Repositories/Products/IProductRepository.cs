@@ -11,6 +11,7 @@ namespace NovinCommerce.Repositories.Products
     public interface IProductRepository : IBasicRepository<Product>
     {
         ValueTask<IEnumerable<Product>> GetByCategoryTypeAsync(string categoryName);
-        Task<Product> SearchByNameAsync(IEnumerable<Product> products, string name);
+        Task<Product> GetByIdAsync(Guid productId);
+        Task<Product> GetByNameAsync(IEnumerable<Product> products, string name);
     }
 }

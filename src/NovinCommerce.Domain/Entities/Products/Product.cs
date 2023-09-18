@@ -14,8 +14,6 @@ using Volo.Abp.Validation;
 
 namespace NovinCommerce.Entities.Products
 {
-
-    
     public class Product : FullAuditedAggregateRoot<Guid>
     {
         protected Product() { }

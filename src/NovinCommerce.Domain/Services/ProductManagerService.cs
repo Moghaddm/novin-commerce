@@ -19,7 +19,7 @@ namespace NovinCommerce.Services
         {
             var products = await _productRepository.GetByCategoryTypeAsync(inputProduct.Category.Name);
 
-            if (await _productRepository.SearchByNameAsync(products, inputProduct.Name) is not null)
+            if (await _productRepository.GetByNameAsync(products, inputProduct.Name) is not null)
                 throw new ProductAlreadyExistException(inputProduct.Name);
 
             Product product = new(inputProduct.Name, inputProduct.Description, inputProduct.Price, inputProduct.Quantity, inputProduct.StockState);
