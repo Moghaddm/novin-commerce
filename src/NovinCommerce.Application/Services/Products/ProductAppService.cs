@@ -19,7 +19,7 @@ namespace NovinCommerce.Services.Products
         private readonly ICategoryRepository _categoryRepository;
         private readonly ICompanyRepository _companyRepository;
 
-        public ProductAppService(IProductRepository productRepository,ICategoryRepository categoryRepository,ICompanyRepository companyRepository)
+        public ProductAppService(IProductRepository productRepository, ICategoryRepository categoryRepository, ICompanyRepository companyRepository)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
@@ -55,10 +55,9 @@ namespace NovinCommerce.Services.Products
 
         public async ValueTask<IEnumerable<ProductDetailsDto>> GetAllAsync()
         {
-
             var products = await _productRepository.GetListAsync();
 
-            return products.Select(p => new ProductDetailsDto
+            var productsOutput = products.Select(p => new ProductDetailsDto
             {
                 Name = p.Name,
                 Description = p.Description,
@@ -66,13 +65,15 @@ namespace NovinCommerce.Services.Products
                 Quantity = p.Quantity,
                 Company = new CompanyDetailsDto { Title = p.Company.Title, Description = p.Company.Description }
             }).ToList();
+
+            return productsOutput;
         }
 
         public async ValueTask<ProductDetailsDto> GetByIdAsync(Guid productId)
         {
             var product = await _productRepository.GetByIdAsync(productId);
 
-            return new ProductDetailsDto
+            var productOutput = new ProductDetailsDto
             {
                 Name = product.Name,
                 Description = product.Description,
@@ -80,6 +81,8 @@ namespace NovinCommerce.Services.Products
                 Quantity = product.Quantity,
                 Company = new CompanyDetailsDto { Title = product.Company.Title, Description = product.Company.Description }
             };
+
+            return productOutput;
         }
 
         public async Task UpdateAsync(Guid productId, ProductCreateUpdateDto inputProduct)

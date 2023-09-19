@@ -13,9 +13,7 @@ public class NovinCommerceMenuContributor : IMenuContributor
     public async Task ConfigureMenuAsync(MenuConfigurationContext context)
     {
         if (context.Menu.Name == StandardMenus.Main)
-        {
             await ConfigureMainMenuAsync(context);
-        }
     }
 
     private Task ConfigureMainMenuAsync(MenuConfigurationContext context)
@@ -35,16 +33,23 @@ public class NovinCommerceMenuContributor : IMenuContributor
         );
 
         if (MultiTenancyConsts.IsEnabled)
-        {
             administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);
-        }
         else
-        {
             administration.TryRemoveMenuItem(TenantManagementMenuNames.GroupName);
-        }
-
+        
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenus.GroupName, 3);
+
+        /* Add Product Management Item */
+        context.Menu.Items.Insert(
+           1,
+           new ApplicationMenuItem(
+               NovinCommerceMenus.Product,
+               l["Menu:Product"],
+               "/products",
+               icon: "fas fa-shopping-cart"
+           )
+       );
 
         return Task.CompletedTask;
     }

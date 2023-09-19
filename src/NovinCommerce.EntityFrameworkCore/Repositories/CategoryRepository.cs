@@ -1,4 +1,5 @@
-﻿using NovinCommerce.Entities.Categories;
+﻿using Microsoft.EntityFrameworkCore;
+using NovinCommerce.Entities.Categories;
 using NovinCommerce.EntityFrameworkCore;
 using NovinCommerce.Repositories.Products;
 using System;
@@ -16,9 +17,13 @@ namespace NovinCommerce.Repositories
     {
         public CategoryRepository(IDbContextProvider<NovinCommerceDbContext> dbContextProvider) : base(dbContextProvider) { }
 
-        public Task<Category> GetByIdAsync(Guid id)
+        public async Task<Category> GetByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var dbset = await GetDbSetAsync();
+
+            var cateogry = await dbset.FirstOrDefaultAsync(c => c.Id == id);
+
+            return cateogry!;
         }
     }
 }

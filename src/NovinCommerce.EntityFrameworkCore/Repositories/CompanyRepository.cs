@@ -1,4 +1,5 @@
-﻿using NovinCommerce.Entities.Companies;
+﻿using Microsoft.EntityFrameworkCore;
+using NovinCommerce.Entities.Companies;
 using NovinCommerce.EntityFrameworkCore;
 using NovinCommerce.Repositories.Companies;
 using System;
@@ -7,14 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore;
 
 namespace NovinCommerce.Repositories
 {
     public class CompanyRepository : EfCoreRepository<NovinCommerceDbContext, Company, Guid>, ICompanyRepository
     {
-        public Task<Company> GetByIdAsync(Guid id)
+        public CompanyRepository(IDbContextProvider<NovinCommerceDbContext> dbContextProvider) : base(dbContextProvider) { }
+
+        public async Task<Company> GetByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var dbset = await GetDbSetAsync();
+
+            var company = await dbset.FirstOrDefaultAsync(c => c.Id == id);
+
+            return company!;
         }
     }
 }
