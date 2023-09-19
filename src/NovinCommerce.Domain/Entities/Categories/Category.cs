@@ -27,7 +27,7 @@ namespace NovinCommerce.Entities.Categories
          => Name = Check.NotNullOrWhiteSpace(name, nameof(name), maxLength: CategoryConsts.MaxNameLength, minLength: CategoryConsts.MinNameLength);
 
         private void SetCategoryDescription(string description)
-       => Name = Check.NotNullOrWhiteSpace(description, nameof(description), maxLength: CategoryConsts.MaxDescriptionLength, CategoryConsts.MinDescriptionLength);
+       => Description = Check.NotNullOrWhiteSpace(description, nameof(description), maxLength: CategoryConsts.MaxDescriptionLength, CategoryConsts.MinDescriptionLength);
 
         public List<Product> Products { get; private set; }
     }

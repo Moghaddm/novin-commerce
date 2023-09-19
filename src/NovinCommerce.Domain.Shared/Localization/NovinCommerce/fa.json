@@ -4,6 +4,10 @@
     "Menu:Home": "صفحه اصلی",
     "Welcome": "خوش آمدید",
     "LongWelcomeMessage": "به نرم افزار خوش آمدید. این یک نرم افزار بر پایه فریموریک ای بی پی می باشد",
-    "Menu:Product": "مدیریت محصول ها"
+    "Menu:Product": "مدیریت محصول ها",
+    "Permission:ProductManagement": "دسترسی مدیریت محصول ها",
+    "Permission:ProductManagement:Create": "ایجاد محصول جدید",
+    "Permission:ProductManagement:Delete": "حذف محصول موجود",
+    "Permission:ProductManagement:Edit": "ویرایش محصول"
   }
 }

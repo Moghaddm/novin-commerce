@@ -47,7 +47,7 @@ namespace NovinCommerce.Entities.Products
             => Name = Check.NotNullOrWhiteSpace(name, nameof(name), maxLength: ProductConsts.MaxNameLength, minLength: ProductConsts.MinNameLength);
 
         private void SetProductDescription(string description)
-       => Name = Check.NotNullOrWhiteSpace(description, nameof(description), maxLength: ProductConsts.MaxDescriptionLength, ProductConsts.MinDescriptionLength);
+       => Description = Check.NotNullOrWhiteSpace(description, nameof(description), maxLength: ProductConsts.MaxDescriptionLength, ProductConsts.MinDescriptionLength);
 
         private void SetProductPrice(long price)
        => Price = Check.Positive(price, nameof(price));

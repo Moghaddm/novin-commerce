@@ -1,7 +1,9 @@
 ﻿using AutoMapper.Internal.Mappers;
+using Microsoft.AspNetCore.Authorization;
 using NovinCommerce.Entities.Categories;
 using NovinCommerce.Entities.Products;
 using NovinCommerce.Models.Products;
+using NovinCommerce.Permissions;
 using NovinCommerce.Repositories.Companies;
 using NovinCommerce.Repositories.Products;
 using System;
@@ -10,10 +12,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
+using Volo.Abp.Application.Services;
 
 namespace NovinCommerce.Services.Products
 {
-    public class ProductAppService : IProductAppService
+    [Authorize(NovinCommercePermissions.Products.Default)]
+    public class ProductAppService : ApplicationService,IProductAppService
     {
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
@@ -26,6 +30,7 @@ namespace NovinCommerce.Services.Products
             _companyRepository = companyRepository;
         }
 
+        [Authorize(NovinCommercePermissions.Products.Create)]
         public async Task<ProductCreateUpdateDto> CreateAsync(ProductCreateUpdateDto productCreateDto, Guid categoryId, Guid companyId)
         {
             var company = await _companyRepository.GetByIdAsync(companyId);
@@ -46,6 +51,7 @@ namespace NovinCommerce.Services.Products
             return productCreateDto;
         }
 
+        [Authorize(NovinCommercePermissions.Products.Delete)]
         public async Task DeleteAsync(Guid productId)
         {
             var product = await _productRepository.GetByIdAsync(productId);
@@ -85,6 +91,7 @@ namespace NovinCommerce.Services.Products
             return productOutput;
         }
 
+        [Authorize(NovinCommercePermissions.Products.Edit)]
         public async Task UpdateAsync(Guid productId, ProductCreateUpdateDto inputProduct)
         {
             var product = await _productRepository.GetByIdAsync(productId);

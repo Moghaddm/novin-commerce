@@ -9,6 +9,7 @@ public class NovinCommercePermissionDefinitionProvider : PermissionDefinitionPro
     public override void Define(IPermissionDefinitionContext context)
     {
         var myGroup = context.AddGroup(NovinCommercePermissions.GroupName);
+
         //Define your own permissions here. Example:
         //myGroup.AddPermission(NovinCommercePermissions.MyPermission1, L("Permission:MyPermission1"));
     }
