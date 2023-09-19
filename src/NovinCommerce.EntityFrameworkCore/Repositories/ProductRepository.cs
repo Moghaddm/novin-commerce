@@ -27,6 +27,11 @@ namespace NovinCommerce.Repositories
             return await dbset.Where(p => p.Category.Name == categoryName).ToListAsync();
         }
 
+        public Task<Product> GetByIdAsync(Guid productId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Product> GetByNameAsync(IEnumerable<Product> products, string name)
         {
             var dbset = await GetDbSetAsync();
@@ -35,7 +40,5 @@ namespace NovinCommerce.Repositories
 
             return product!;
         }
-
-        public async Task<Product> Create
     }
 }

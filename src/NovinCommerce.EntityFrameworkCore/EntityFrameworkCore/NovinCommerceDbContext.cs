@@ -31,6 +31,7 @@ public class NovinCommerceDbContext :
 
     public virtual DbSet<Product> Products { get; set; }
     public virtual DbSet<Category> Categories { get; set; }
+    public virtual DbSet<Company> Companies { get; set; }
 
     #region Entities from the modules
 
@@ -53,7 +54,7 @@ public class NovinCommerceDbContext :
     public DbSet<IdentitySecurityLog> SecurityLogs { get; set; }
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
     public DbSet<IdentityUserDelegation> UserDelegations { get; set; }
-
+    
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
@@ -83,6 +84,8 @@ public class NovinCommerceDbContext :
 
         /* Configure your own tables/entities inside here */
 
+
+        /* Product Configuration */
         builder.Entity<Product>(p =>
         {
             p.ToTable("Products");
@@ -90,6 +93,9 @@ public class NovinCommerceDbContext :
             p.Property(p => p.Name).IsRequired();
         });
 
+        builder.Entity<Product>().HasOne(p => p.Company).WithMany().HasForeignKey("CompanyId");
+
+        /* Category Configuration */
         builder.Entity<Category>(c =>
         {
             c.ToTable("Category");
@@ -97,8 +103,16 @@ public class NovinCommerceDbContext :
             c.Property(c => c.Name).IsRequired();
         });
 
-        builder.Entity<Company>().HasMany<Product>().WithOne(c => c.Company).HasForeignKey(p => p.Company);
-        builder.Entity<Product>().HasOne<Category>().WithMany(p => p.Products);
+        builder.Entity<Category>().HasMany(c => c.Products).WithOne(p => p.Category).HasForeignKey("CategoryId");
+
+        /* Company Configuration */
+        builder.Entity<Company>(c =>
+        {
+            c.ToTable("Companies");
+            c.HasKey(c => c.Id);
+            c.Property(c => c.Title).IsRequired();
+        });
+
 
         //builder.Entity<YourEntity>(b =>
         //{

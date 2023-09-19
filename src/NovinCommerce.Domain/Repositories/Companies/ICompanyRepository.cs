@@ -12,5 +12,6 @@ namespace NovinCommerce.Repositories.Companies
     public interface ICompanyRepository : IBasicRepository<Company>
     {
         Task<Company> GetByIdAsync(Guid id);
+
     }
 }

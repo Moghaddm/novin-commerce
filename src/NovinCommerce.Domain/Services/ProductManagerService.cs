@@ -22,7 +22,13 @@ namespace NovinCommerce.Services
             if (await _productRepository.GetByNameAsync(products, inputProduct.Name) is not null)
                 throw new ProductAlreadyExistException(inputProduct.Name);
 
-            Product product = new(inputProduct.Name, inputProduct.Description, inputProduct.Price, inputProduct.Quantity, inputProduct.StockState);
+            Product product = new(inputProduct.Name,
+                inputProduct.Description,
+                inputProduct.Price,
+                inputProduct.Quantity,
+                inputProduct.StockState,
+                inputProduct.Category,
+                inputProduct.Company);
 
             return product;
         }

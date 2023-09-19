@@ -8,7 +8,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace NovinCommerce.Repositories.Products
 {
-    public interface ICategoryRepository : IBasicRepository<Category>
+    public interface ICategoryRepository : IRepository<Category,Guid>
     {
        Task<Category> GetByIdAsync(Guid id);
     }
