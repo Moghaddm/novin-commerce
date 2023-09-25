@@ -36,7 +36,7 @@ public class NovinCommerceMenuContributor : IMenuContributor
             administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);
         else
             administration.TryRemoveMenuItem(TenantManagementMenuNames.GroupName);
-        
+
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenus.GroupName, 3);
 

@@ -29,10 +29,10 @@ namespace NovinCm.ProductManagement.Products
         [HttpGet("{categoryId}", Name = "GetByIdCategory")]
         public async ValueTask<CategoryDto> GetByIdAsync(Guid categoryId) => await _categoryAppService.GetByIdAsync(categoryId);
 
-        [HttpDelete(Name = "DeleteCategory")]
+        [HttpDelete("{categoryId}",Name = "DeleteCategory")]
         public async Task DeleteAsync(Guid categoryId) => await _categoryAppService.DeleteAsync(categoryId);
 
-        [HttpPut(Name = "UpdateCategory")]
+        [HttpPut("{categoryId}",Name = "UpdateCategory")]
         public async Task UpdateAsync(Guid categoryId, CategoryDto inputCategory) => await _categoryAppService.UpdateAsync(categoryId, inputCategory);
     }
 }
