@@ -40,7 +40,7 @@ public class NovinCommerceMenuContributor : IMenuContributor
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenus.GroupName, 3);
 
-        /* Add Product Management Item */
+        /* Add Product Management Item 
         context.Menu.Items.Insert(
            1,
            new ApplicationMenuItem(
@@ -50,6 +50,7 @@ public class NovinCommerceMenuContributor : IMenuContributor
                icon: "fas fa-shopping-cart"
            )
        );
+        */
 
         return Task.CompletedTask;
     }

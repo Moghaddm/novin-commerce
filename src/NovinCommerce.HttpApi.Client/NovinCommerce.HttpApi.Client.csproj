@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NovinCommerce.Application.Contracts\NovinCommerce.Application.Contracts.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.HttpApi.Client\NovinCm.ProductManagement.HttpApi.Client.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Account.HttpApi.Client" Version="7.3.3" />

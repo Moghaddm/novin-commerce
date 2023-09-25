@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using NovinCommerce.MultiTenancy;
 using Volo.Abp.AuditLogging;
@@ -14,6 +14,7 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.OpenIddict;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using NovinCm.ProductManagement;
 
 namespace NovinCommerce;
 
@@ -30,7 +31,8 @@ namespace NovinCommerce;
     typeof(AbpTenantManagementDomainModule),
     typeof(AbpEmailingModule)
 )]
-public class NovinCommerceDomainModule : AbpModule
+[DependsOn(typeof(ProductManagementDomainModule))]
+    public class NovinCommerceDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
@@ -54,6 +56,7 @@ public class NovinCommerceDomainModule : AbpModule
             options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "繁體中文"));
             options.Languages.Add(new LanguageInfo("de-DE", "de-DE", "Deutsch", "de"));
             options.Languages.Add(new LanguageInfo("es", "es", "Español"));
+            options.Languages.Add(new LanguageInfo("fa", "fa", "فارسی"));
         });
 
         Configure<AbpMultiTenancyOptions>(options =>

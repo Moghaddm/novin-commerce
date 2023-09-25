@@ -6,9 +6,9 @@
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
     "NovinCommerce:00001": "Product cannot be repeat with exact name in the same category",
     "Menu:Product": "Product Management",
-    "Permission:ProductManagement": "Product Permissions",
-    "Permission:ProductManagement:Create": "Creating New Products",
-    "Permission:ProductManagement:Delete": "Remove Existing Product",
-    "Permission:ProductManagement:Edit": "Modify Existing Product"
+    "Permission:CompanyManagement" : "Company Management Permissions",
+    "Permission:CompanyManagement:Create": "Creating New Companies",
+    "Permission:CompanyManagement:Delete" : "Remove Existing Company",
+    "Permission:CompanyManagement:Edit": "Modify Existing Company"
   }
 }

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NovinCommerce.Domain.Shared\NovinCommerce.Domain.Shared.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain\NovinCm.ProductManagement.Domain.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Emailing" Version="7.3.3" />

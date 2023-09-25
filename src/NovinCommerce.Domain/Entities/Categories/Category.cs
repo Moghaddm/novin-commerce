@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using JetBrains.Annotations;
 using NovinCommerce.Categories;
 using NovinCommerce.Entities.Products;
 using Volo.Abp;
@@ -28,6 +30,12 @@ namespace NovinCommerce.Entities.Categories
 
         private void SetCategoryDescription(string description)
        => Description = Check.NotNullOrWhiteSpace(description, nameof(description), maxLength: CategoryConsts.MaxDescriptionLength, CategoryConsts.MinDescriptionLength);
+
+        public void Update(string name, [CanBeNull] string description)
+        {
+            SetCategoryName(name);
+            SetCategoryDescription(description);
+        }
 
         public List<Product> Products { get; private set; }
     }

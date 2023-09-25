@@ -1,4 +1,4 @@
-﻿using Localization.Resources.AbpUi;
+using Localization.Resources.AbpUi;
 using NovinCommerce.Localization;
 using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
@@ -8,6 +8,8 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using NovinCm.ProductManagement;
+using Volo.Abp.AspNetCore.Mvc;
 
 namespace NovinCommerce;
 
@@ -20,11 +22,22 @@ namespace NovinCommerce;
     typeof(AbpFeatureManagementHttpApiModule),
     typeof(AbpSettingManagementHttpApiModule)
     )]
-public class NovinCommerceHttpApiModule : AbpModule
+[DependsOn(typeof(ProductManagementHttpApiModule))]
+    public class NovinCommerceHttpApiModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         ConfigureLocalization();
+
+        //Configure<AbpAspNetCoreMvcOptions>(options =>
+        //{
+        //    options
+        //        .ConventionalControllers
+        //        .Create(typeof(ProductManagementAppService).Assembly, opt =>
+        //        {
+        //            opt.RootPath = "ProductManagement";
+        //        });
+        //});
     }
 
     private void ConfigureLocalization()

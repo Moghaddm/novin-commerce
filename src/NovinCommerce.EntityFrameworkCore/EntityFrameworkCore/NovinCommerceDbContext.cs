@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using NovinCommerce.Entities.Categories;
 using NovinCommerce.Entities.Companies;
 using NovinCommerce.Entities.Products;
@@ -16,6 +16,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using NovinCm.ProductManagement.EntityFrameworkCore;
 
 namespace NovinCommerce.EntityFrameworkCore;
 
@@ -120,5 +121,6 @@ public class NovinCommerceDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
-    }
+            builder.ConfigureProductManagement();
+        }
 }

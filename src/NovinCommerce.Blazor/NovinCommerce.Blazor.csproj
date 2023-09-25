@@ -18,7 +18,7 @@
     <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.2.3" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Blazor.Server\NovinCm.ProductManagement.Blazor.Server.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.AspNetCore.Components.Server.LeptonXLiteTheme" Version="2.3.*-*" />

@@ -27,13 +27,22 @@ namespace NovinCommerce.Repositories
             return await dbset.Where(p => p.Category.Name == categoryName).ToListAsync();
         }
 
-        public async Task<Product> GetByIdAsync(Guid productId)
+        public async ValueTask<Product> GetByIdAsync(Guid productId)
+        {
+            var dbset = await GetDbSetAsync();
+                
+            var product = await dbset.Include(p => p.Company).FirstOrDefaultAsync(p => p.Id == productId);
+
+            return product!;
+        }
+
+        public async ValueTask<IEnumerable<Product>> GetAllAsync()
         {
             var dbset = await GetDbSetAsync();
 
-            var product = await dbset.FirstOrDefaultAsync(p => p.Id == productId);
+            var products = await dbset.Include(p => p.Company).ToListAsync();
 
-            return product!;
+            return products;
         }
 
         public async Task<Product> GetByNameAsync(IEnumerable<Product> products, string name)

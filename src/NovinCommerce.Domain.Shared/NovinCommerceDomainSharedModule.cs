@@ -1,4 +1,4 @@
-﻿using NovinCommerce.Localization;
+using NovinCommerce.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.FeatureManagement;
@@ -12,6 +12,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
+using NovinCm.ProductManagement;
 
 namespace NovinCommerce;
 
@@ -25,7 +26,8 @@ namespace NovinCommerce;
     typeof(AbpSettingManagementDomainSharedModule),
     typeof(AbpTenantManagementDomainSharedModule)    
     )]
-public class NovinCommerceDomainSharedModule : AbpModule
+[DependsOn(typeof(ProductManagementDomainSharedModule))]
+    public class NovinCommerceDomainSharedModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
