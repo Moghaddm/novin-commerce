@@ -1,0 +1,15 @@
+{
+  "culture": "en",
+  "texts": {
+    "MyAccount": "My account",
+    "SamplePageMessage": "A sample page for the ProductManagement module",
+    "Permission:ProductManagement": "Product Management Permissions",
+    "Permission:ProductManagement:Create": "Creating New Products",
+    "Permission:ProductManagement:Delete": "Remove Existing Product",
+    "Permission:ProductManagement:Edit": "Modify Existing Product",
+    "Permission:CategoryManagement": "Category Management Permissions",
+    "Permission:CategoryManagement:Create": "Creating New Categories",
+    "Permission:CategoryManagement:Edit": "Modify Existing Category",
+    "Permission:CategoryManagement:Delete": "Remove Existing Product"
+  }
+}

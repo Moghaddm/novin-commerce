@@ -1,0 +1,15 @@
+{
+  "culture": "fa",
+  "texts": {
+    "MyAccount": "حساب کاربری من",
+    "SamplePageMessage": "یک صفحه ساده برای بخش مدیریت محصول ",
+    "Permission:ProductManagement": "دسترسی مدیریت محصول ها",
+    "Permission:ProductManagement:Create": "ایجاد محصول جدید",
+    "Permission:ProductManagement:Delete": "حذف محصول موجود",
+    "Permission:ProductManagement:Edit": "ویرایش محصول",
+    "Permission:CategoryManagement": "مدیریت دسته بندی های محصول",
+    "Permission:CategoryManagement:Create": "ایجاد یک دسته بندی جدید",
+    "Permission:CategoryManagement:Edit": "ویرایش دسته بندی",
+    "Permission:CategoryManagement:Delete": "حذف دسته بندی"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "NovinCm.ProductManagement": {
+      "path": "NovinCm.ProductManagement.abpmdl.json"
+    }
+  }
+}

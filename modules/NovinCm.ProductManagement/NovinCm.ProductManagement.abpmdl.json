@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "NovinCm.ProductManagement.Domain.Shared": {
+      "path": "src/NovinCm.ProductManagement.Domain.Shared/NovinCm.ProductManagement.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.Domain": {
+      "path": "src/NovinCm.ProductManagement.Domain/NovinCm.ProductManagement.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.Application.Contracts": {
+      "path": "src/NovinCm.ProductManagement.Application.Contracts/NovinCm.ProductManagement.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.Application": {
+      "path": "src/NovinCm.ProductManagement.Application/NovinCm.ProductManagement.Application.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.EntityFrameworkCore": {
+      "path": "src/NovinCm.ProductManagement.EntityFrameworkCore/NovinCm.ProductManagement.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.MongoDB": {
+      "path": "src/NovinCm.ProductManagement.MongoDB/NovinCm.ProductManagement.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.HttpApi": {
+      "path": "src/NovinCm.ProductManagement.HttpApi/NovinCm.ProductManagement.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.HttpApi.Client": {
+      "path": "src/NovinCm.ProductManagement.HttpApi.Client/NovinCm.ProductManagement.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.TestBase": {
+      "path": "test/NovinCm.ProductManagement.TestBase/NovinCm.ProductManagement.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.ProductManagement.EntityFrameworkCore.Tests": {
+      "path": "test/NovinCm.ProductManagement.EntityFrameworkCore.Tests/NovinCm.ProductManagement.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.ProductManagement.MongoDB.Tests": {
+      "path": "test/NovinCm.ProductManagement.MongoDB.Tests/NovinCm.ProductManagement.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.ProductManagement.Domain.Tests": {
+      "path": "test/NovinCm.ProductManagement.Domain.Tests/NovinCm.ProductManagement.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.ProductManagement.Application.Tests": {
+      "path": "test/NovinCm.ProductManagement.Application.Tests/NovinCm.ProductManagement.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.ProductManagement.HttpApi.Host": {
+      "path": "host/NovinCm.ProductManagement.HttpApi.Host/NovinCm.ProductManagement.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.ProductManagement.Web": {
+      "path": "src/NovinCm.ProductManagement.Web/NovinCm.ProductManagement.Web.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp/NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.ProductManagement.Web.Host": {
+      "path": "host/NovinCm.ProductManagement.Web.Host/NovinCm.ProductManagement.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.ProductManagement.AuthServer": {
+      "path": "host/NovinCm.ProductManagement.AuthServer/NovinCm.ProductManagement.AuthServer.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.ProductManagement.Host.Shared": {
+      "path": "host/NovinCm.ProductManagement.Host.Shared/NovinCm.ProductManagement.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.ProductManagement.Web.Unified": {
+      "path": "host/NovinCm.ProductManagement.Web.Unified/NovinCm.ProductManagement.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.ProductManagement.Blazor": {
+      "path": "src/NovinCm.ProductManagement.Blazor/NovinCm.ProductManagement.Blazor.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.Blazor.Host": {
+      "path": "host/NovinCm.ProductManagement.Blazor.Host/NovinCm.ProductManagement.Blazor.Host.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.ProductManagement.Blazor.Server": {
+      "path": "src/NovinCm.ProductManagement.Blazor.Server/NovinCm.ProductManagement.Blazor.Server.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.Blazor.WebAssembly": {
+      "path": "src/NovinCm.ProductManagement.Blazor.WebAssembly/NovinCm.ProductManagement.Blazor.WebAssembly.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.ProductManagement.Blazor.Server.Host": {
+      "path": "host/NovinCm.ProductManagement.Blazor.Server.Host/NovinCm.ProductManagement.Blazor.Server.Host.abppkg.json",
+      "folder": "host"
+    }
+  }
+}
