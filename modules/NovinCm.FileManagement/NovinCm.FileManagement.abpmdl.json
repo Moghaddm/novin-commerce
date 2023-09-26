@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "NovinCm.FileManagement.Domain.Shared": {
+      "path": "src/NovinCm.FileManagement.Domain.Shared/NovinCm.FileManagement.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.Domain": {
+      "path": "src/NovinCm.FileManagement.Domain/NovinCm.FileManagement.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.Application.Contracts": {
+      "path": "src/NovinCm.FileManagement.Application.Contracts/NovinCm.FileManagement.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.Application": {
+      "path": "src/NovinCm.FileManagement.Application/NovinCm.FileManagement.Application.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.EntityFrameworkCore": {
+      "path": "src/NovinCm.FileManagement.EntityFrameworkCore/NovinCm.FileManagement.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.MongoDB": {
+      "path": "src/NovinCm.FileManagement.MongoDB/NovinCm.FileManagement.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.HttpApi": {
+      "path": "src/NovinCm.FileManagement.HttpApi/NovinCm.FileManagement.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.HttpApi.Client": {
+      "path": "src/NovinCm.FileManagement.HttpApi.Client/NovinCm.FileManagement.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.TestBase": {
+      "path": "test/NovinCm.FileManagement.TestBase/NovinCm.FileManagement.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.FileManagement.EntityFrameworkCore.Tests": {
+      "path": "test/NovinCm.FileManagement.EntityFrameworkCore.Tests/NovinCm.FileManagement.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.FileManagement.MongoDB.Tests": {
+      "path": "test/NovinCm.FileManagement.MongoDB.Tests/NovinCm.FileManagement.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.FileManagement.Domain.Tests": {
+      "path": "test/NovinCm.FileManagement.Domain.Tests/NovinCm.FileManagement.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.FileManagement.Application.Tests": {
+      "path": "test/NovinCm.FileManagement.Application.Tests/NovinCm.FileManagement.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.FileManagement.HttpApi.Host": {
+      "path": "host/NovinCm.FileManagement.HttpApi.Host/NovinCm.FileManagement.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.FileManagement.Web": {
+      "path": "src/NovinCm.FileManagement.Web/NovinCm.FileManagement.Web.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/NovinCm.FileManagement.HttpApi.Client.ConsoleTestApp/NovinCm.FileManagement.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "NovinCm.FileManagement.Web.Host": {
+      "path": "host/NovinCm.FileManagement.Web.Host/NovinCm.FileManagement.Web.Host.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.FileManagement.AuthServer": {
+      "path": "host/NovinCm.FileManagement.AuthServer/NovinCm.FileManagement.AuthServer.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.FileManagement.Host.Shared": {
+      "path": "host/NovinCm.FileManagement.Host.Shared/NovinCm.FileManagement.Host.Shared.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.FileManagement.Web.Unified": {
+      "path": "host/NovinCm.FileManagement.Web.Unified/NovinCm.FileManagement.Web.Unified.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.FileManagement.Blazor": {
+      "path": "src/NovinCm.FileManagement.Blazor/NovinCm.FileManagement.Blazor.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.Blazor.Host": {
+      "path": "host/NovinCm.FileManagement.Blazor.Host/NovinCm.FileManagement.Blazor.Host.abppkg.json",
+      "folder": "host"
+    },
+    "NovinCm.FileManagement.Blazor.Server": {
+      "path": "src/NovinCm.FileManagement.Blazor.Server/NovinCm.FileManagement.Blazor.Server.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.Blazor.WebAssembly": {
+      "path": "src/NovinCm.FileManagement.Blazor.WebAssembly/NovinCm.FileManagement.Blazor.WebAssembly.abppkg.json",
+      "folder": "src"
+    },
+    "NovinCm.FileManagement.Blazor.Server.Host": {
+      "path": "host/NovinCm.FileManagement.Blazor.Server.Host/NovinCm.FileManagement.Blazor.Server.Host.abppkg.json",
+      "folder": "host"
+    }
+  }
+}

@@ -7,6 +7,7 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using NovinCm.ProductManagement;
+using NovinCm.FileManagement;
 
 namespace NovinCommerce;
 
@@ -21,6 +22,7 @@ namespace NovinCommerce;
     typeof(AbpObjectExtendingModule)
 )]
 [DependsOn(typeof(ProductManagementApplicationContractsModule))]
+    [DependsOn(typeof(FileManagementApplicationContractsModule))]
     public class NovinCommerceApplicationContractsModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

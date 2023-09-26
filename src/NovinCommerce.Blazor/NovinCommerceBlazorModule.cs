@@ -42,6 +42,7 @@ using Volo.Abp.UI.Navigation;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
 using NovinCm.ProductManagement.Blazor.Server;
+using NovinCm.FileManagement.Blazor.Server;
 
 namespace NovinCommerce.Blazor;
 
@@ -60,6 +61,7 @@ namespace NovinCommerce.Blazor;
     typeof(AbpSettingManagementBlazorServerModule)
    )]
 [DependsOn(typeof(ProductManagementBlazorServerModule))]
+[DependsOn(typeof(FileManagementBlazorServerModule))]
     public class NovinCommerceBlazorModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

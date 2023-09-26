@@ -8,6 +8,7 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using NovinCm.ProductManagement;
+using NovinCm.FileManagement;
 
 namespace NovinCommerce;
 
@@ -22,6 +23,7 @@ namespace NovinCommerce;
     typeof(AbpSettingManagementApplicationModule)
     )]
 [DependsOn(typeof(ProductManagementApplicationModule))]
+    [DependsOn(typeof(FileManagementApplicationModule))]
     public class NovinCommerceApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

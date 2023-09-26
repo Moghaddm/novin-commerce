@@ -8,6 +8,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.VirtualFileSystem;
 using NovinCm.ProductManagement;
+using NovinCm.FileManagement;
 
 namespace NovinCommerce;
 
@@ -21,6 +22,7 @@ namespace NovinCommerce;
     typeof(AbpSettingManagementHttpApiClientModule)
 )]
 [DependsOn(typeof(ProductManagementHttpApiClientModule))]
+    [DependsOn(typeof(FileManagementHttpApiClientModule))]
     public class NovinCommerceHttpApiClientModule : AbpModule
 {
     public const string RemoteServiceName = "Default";

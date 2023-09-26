@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.UI.Navigation;
 
 namespace NovinCm.ProductManagement.Blazor.Menus;
@@ -16,7 +17,7 @@ public class ProductManagementMenuContributor : IMenuContributor
     private Task ConfigureMainMenuAsync(MenuConfigurationContext context)
     {
         //Add main menu items.
-        context.Menu.AddItem(new ApplicationMenuItem(ProductManagementMenus.Prefix, displayName: "Product Management", "/ProductManagement", icon: "fas fa-shopping-cart"));
+        context.Menu.AddItem(new ApplicationMenuItem(ProductManagementMenus.Prefix, displayName: "Product Management", "/ProductManagement", icon: "fas fa-shopping-cart").RequireAuthenticated());
 
         return Task.CompletedTask;
     }
