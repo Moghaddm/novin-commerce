@@ -8,6 +8,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using NovinCm.ProductManagement;
 
+
 namespace NovinCommerce;
 
 [DependsOn(

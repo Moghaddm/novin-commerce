@@ -18,7 +18,14 @@ namespace NovinCommerce.Entities.Products
     {
         protected Product() { }
 
-        public Product(string name, string description, long price, int quantity, ProductStockState stockState, Category category, Company company)
+        public Product(
+            string name,
+            string description,
+            long price,
+            int quantity,
+            ProductStockState stockState,
+            Category category,
+            Company company)
         {
             SetProductName(name);
             SetProductDescription(description);

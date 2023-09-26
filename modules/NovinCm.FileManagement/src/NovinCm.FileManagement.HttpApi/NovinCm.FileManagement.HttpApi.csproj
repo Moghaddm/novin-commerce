@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>NovinCm.FileManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="7.3.3" />
+    <ProjectReference Include="..\NovinCm.FileManagement.Application.Contracts\NovinCm.FileManagement.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

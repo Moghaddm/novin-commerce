@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "NovinCm.FileManagement": {
+      "path": "NovinCm.FileManagement.abpmdl.json"
+    }
+  }
+}

@@ -1,45 +1,45 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29020.237
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCommerce.Domain", "src\NovinCommerce.Domain\NovinCommerce.Domain.csproj", "{554AD327-6DBA-4F8F-96F8-81CE7A0C863F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.TestBase", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.TestBase\NovinCm.ProductManagement.TestBase.csproj", "{107237a4-ee90-491f-aa96-e8e544b2da1b}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.TestBase", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.TestBase\NovinCm.ProductManagement.TestBase.csproj", "{107237A4-EE90-491F-AA96-E8E544B2DA1B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp.csproj", "{62c350fe-3ece-482f-b510-faf722c35dad}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp.csproj", "{62C350FE-3ECE-482F-B510-FAF722C35DAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.EntityFrameworkCore.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.EntityFrameworkCore.Tests\NovinCm.ProductManagement.EntityFrameworkCore.Tests.csproj", "{a5ccdf13-328f-470f-90f4-fa5ca18ac49f}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.EntityFrameworkCore.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.EntityFrameworkCore.Tests\NovinCm.ProductManagement.EntityFrameworkCore.Tests.csproj", "{A5CCDF13-328F-470F-90F4-FA5CA18AC49F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.Domain.Tests\NovinCm.ProductManagement.Domain.Tests.csproj", "{136d6ac9-f7b0-436d-88ec-c71481ed173f}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.Domain.Tests\NovinCm.ProductManagement.Domain.Tests.csproj", "{136D6AC9-F7B0-436D-88EC-C71481ED173F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.Application.Tests\NovinCm.ProductManagement.Application.Tests.csproj", "{0329fb51-497d-47c5-a09c-08fc3af958aa}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.Application.Tests\NovinCm.ProductManagement.Application.Tests.csproj", "{0329FB51-497D-47C5-A09C-08FC3AF958AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Installer", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Installer\NovinCm.ProductManagement.Installer.csproj", "{8a2cb3a6-096c-437f-a443-ef90547e7cf7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Installer", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Installer\NovinCm.ProductManagement.Installer.csproj", "{8A2CB3A6-096C-437F-A443-EF90547E7CF7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi.Client", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.HttpApi.Client\NovinCm.ProductManagement.HttpApi.Client.csproj", "{25ed1379-65c9-4774-96bf-49b63a13ab83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi.Client", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.HttpApi.Client\NovinCm.ProductManagement.HttpApi.Client.csproj", "{25ED1379-65C9-4774-96BF-49B63A13AB83}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.HttpApi\NovinCm.ProductManagement.HttpApi.csproj", "{9243a282-a33e-4a8b-8a26-dc9fd91f4b82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.HttpApi\NovinCm.ProductManagement.HttpApi.csproj", "{9243A282-A33E-4A8B-8A26-DC9FD91F4B82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.EntityFrameworkCore", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.EntityFrameworkCore\NovinCm.ProductManagement.EntityFrameworkCore.csproj", "{027737f3-3cbc-487f-9c3f-f4780a375e2c}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.EntityFrameworkCore", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.EntityFrameworkCore\NovinCm.ProductManagement.EntityFrameworkCore.csproj", "{027737F3-3CBC-487F-9C3F-F4780A375E2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain.Shared", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain.Shared\NovinCm.ProductManagement.Domain.Shared.csproj", "{37f66334-bbbe-4fbc-838f-9626935b9d01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain.Shared", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain.Shared\NovinCm.ProductManagement.Domain.Shared.csproj", "{37F66334-BBBE-4FBC-838F-9626935B9D01}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain\NovinCm.ProductManagement.Domain.csproj", "{db4f0c97-1f64-40dc-908b-332a15ff9a21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain\NovinCm.ProductManagement.Domain.csproj", "{DB4F0C97-1F64-40DC-908B-332A15FF9A21}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Blazor.Server", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Blazor.Server\NovinCm.ProductManagement.Blazor.Server.csproj", "{9294bf4a-a557-405c-b1d8-b8c5f0d3cbb1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Blazor.Server", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Blazor.Server\NovinCm.ProductManagement.Blazor.Server.csproj", "{9294BF4A-A557-405C-B1D8-B8C5F0D3CBB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Blazor", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Blazor\NovinCm.ProductManagement.Blazor.csproj", "{45356469-aff5-4d11-bbaa-cc6b5f7cc4a8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Blazor", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Blazor\NovinCm.ProductManagement.Blazor.csproj", "{45356469-AFF5-4D11-BBAA-CC6B5F7CC4A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application.Contracts", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application.Contracts\NovinCm.ProductManagement.Application.Contracts.csproj", "{1495e677-70f7-4dc3-b44d-227649f8df8e}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application.Contracts", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application.Contracts\NovinCm.ProductManagement.Application.Contracts.csproj", "{1495E677-70F7-4DC3-B44D-227649F8DF8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application\NovinCm.ProductManagement.Application.csproj", "{cb7d6e53-37fb-468b-bca2-fbcdd4117a89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application\NovinCm.ProductManagement.Application.csproj", "{CB7D6E53-37FB-468B-BCA2-FBCDD4117A89}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NovinCm.ProductManagement.Tests", "NovinCm.ProductManagement.Tests", "{eb407bf4-5b01-4624-940b-101b01bcc823}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NovinCm.ProductManagement.Tests", "NovinCm.ProductManagement.Tests", "{EB407BF4-5B01-4624-940B-101B01BCC823}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NovinCm.ProductManagement", "NovinCm.ProductManagement", "{f86c1f82-ebba-41e8-a2d3-fe364839fe4d}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NovinCm.ProductManagement", "NovinCm.ProductManagement", "{F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{ddb030d4-6f8b-4def-bc9d-8afa1c44d566}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{DDB030D4-6F8B-4DEF-BC9D-8AFA1C44D566}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCommerce.Application", "src\NovinCommerce.Application\NovinCommerce.Application.csproj", "{1A94A50E-06DC-43C1-80B5-B662820EC3EB}"
 EndProject
@@ -69,7 +69,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCommerce.HttpApi.Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCommerce.DbMigrator", "src\NovinCommerce.DbMigrator\NovinCommerce.DbMigrator.csproj", "{AA94D832-1CCC-4715-95A9-A483F23A1A5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovinCommerce.Blazor", "src\NovinCommerce.Blazor\NovinCommerce.Blazor.csproj", "{16F0BF4E-7D73-4278-8D9A-7CDE37105C6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCommerce.Blazor", "src\NovinCommerce.Blazor\NovinCommerce.Blazor.csproj", "{16F0BF4E-7D73-4278-8D9A-7CDE37105C6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,70 +77,66 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{107237a4-ee90-491f-aa96-e8e544b2da1b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{107237a4-ee90-491f-aa96-e8e544b2da1b}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{107237a4-ee90-491f-aa96-e8e544b2da1b}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{107237a4-ee90-491f-aa96-e8e544b2da1b}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62c350fe-3ece-482f-b510-faf722c35dad}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62c350fe-3ece-482f-b510-faf722c35dad}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62c350fe-3ece-482f-b510-faf722c35dad}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62c350fe-3ece-482f-b510-faf722c35dad}.Release|Any CPU.Build.0 = Release|Any CPU
-		{a5ccdf13-328f-470f-90f4-fa5ca18ac49f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{a5ccdf13-328f-470f-90f4-fa5ca18ac49f}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{a5ccdf13-328f-470f-90f4-fa5ca18ac49f}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{a5ccdf13-328f-470f-90f4-fa5ca18ac49f}.Release|Any CPU.Build.0 = Release|Any CPU
-		{136d6ac9-f7b0-436d-88ec-c71481ed173f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{136d6ac9-f7b0-436d-88ec-c71481ed173f}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{136d6ac9-f7b0-436d-88ec-c71481ed173f}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{136d6ac9-f7b0-436d-88ec-c71481ed173f}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0329fb51-497d-47c5-a09c-08fc3af958aa}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0329fb51-497d-47c5-a09c-08fc3af958aa}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0329fb51-497d-47c5-a09c-08fc3af958aa}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0329fb51-497d-47c5-a09c-08fc3af958aa}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8a2cb3a6-096c-437f-a443-ef90547e7cf7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8a2cb3a6-096c-437f-a443-ef90547e7cf7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8a2cb3a6-096c-437f-a443-ef90547e7cf7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8a2cb3a6-096c-437f-a443-ef90547e7cf7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25ed1379-65c9-4774-96bf-49b63a13ab83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25ed1379-65c9-4774-96bf-49b63a13ab83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25ed1379-65c9-4774-96bf-49b63a13ab83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25ed1379-65c9-4774-96bf-49b63a13ab83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9243a282-a33e-4a8b-8a26-dc9fd91f4b82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9243a282-a33e-4a8b-8a26-dc9fd91f4b82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9243a282-a33e-4a8b-8a26-dc9fd91f4b82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9243a282-a33e-4a8b-8a26-dc9fd91f4b82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{027737f3-3cbc-487f-9c3f-f4780a375e2c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{027737f3-3cbc-487f-9c3f-f4780a375e2c}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{027737f3-3cbc-487f-9c3f-f4780a375e2c}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{027737f3-3cbc-487f-9c3f-f4780a375e2c}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37f66334-bbbe-4fbc-838f-9626935b9d01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37f66334-bbbe-4fbc-838f-9626935b9d01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37f66334-bbbe-4fbc-838f-9626935b9d01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37f66334-bbbe-4fbc-838f-9626935b9d01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{db4f0c97-1f64-40dc-908b-332a15ff9a21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{db4f0c97-1f64-40dc-908b-332a15ff9a21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{db4f0c97-1f64-40dc-908b-332a15ff9a21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{db4f0c97-1f64-40dc-908b-332a15ff9a21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9294bf4a-a557-405c-b1d8-b8c5f0d3cbb1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9294bf4a-a557-405c-b1d8-b8c5f0d3cbb1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9294bf4a-a557-405c-b1d8-b8c5f0d3cbb1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9294bf4a-a557-405c-b1d8-b8c5f0d3cbb1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{45356469-aff5-4d11-bbaa-cc6b5f7cc4a8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45356469-aff5-4d11-bbaa-cc6b5f7cc4a8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45356469-aff5-4d11-bbaa-cc6b5f7cc4a8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45356469-aff5-4d11-bbaa-cc6b5f7cc4a8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1495e677-70f7-4dc3-b44d-227649f8df8e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1495e677-70f7-4dc3-b44d-227649f8df8e}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1495e677-70f7-4dc3-b44d-227649f8df8e}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1495e677-70f7-4dc3-b44d-227649f8df8e}.Release|Any CPU.Build.0 = Release|Any CPU
-		{cb7d6e53-37fb-468b-bca2-fbcdd4117a89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{cb7d6e53-37fb-468b-bca2-fbcdd4117a89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{cb7d6e53-37fb-468b-bca2-fbcdd4117a89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{cb7d6e53-37fb-468b-bca2-fbcdd4117a89}.Release|Any CPU.Build.0 = Release|Any CPU
 		{554AD327-6DBA-4F8F-96F8-81CE7A0C863F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{554AD327-6DBA-4F8F-96F8-81CE7A0C863F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{554AD327-6DBA-4F8F-96F8-81CE7A0C863F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{554AD327-6DBA-4F8F-96F8-81CE7A0C863F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{107237A4-EE90-491F-AA96-E8E544B2DA1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{107237A4-EE90-491F-AA96-E8E544B2DA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{107237A4-EE90-491F-AA96-E8E544B2DA1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C350FE-3ECE-482F-B510-FAF722C35DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C350FE-3ECE-482F-B510-FAF722C35DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C350FE-3ECE-482F-B510-FAF722C35DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5CCDF13-328F-470F-90F4-FA5CA18AC49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CCDF13-328F-470F-90F4-FA5CA18AC49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CCDF13-328F-470F-90F4-FA5CA18AC49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CCDF13-328F-470F-90F4-FA5CA18AC49F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136D6AC9-F7B0-436D-88EC-C71481ED173F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136D6AC9-F7B0-436D-88EC-C71481ED173F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136D6AC9-F7B0-436D-88EC-C71481ED173F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136D6AC9-F7B0-436D-88EC-C71481ED173F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0329FB51-497D-47C5-A09C-08FC3AF958AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0329FB51-497D-47C5-A09C-08FC3AF958AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0329FB51-497D-47C5-A09C-08FC3AF958AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0329FB51-497D-47C5-A09C-08FC3AF958AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A2CB3A6-096C-437F-A443-EF90547E7CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2CB3A6-096C-437F-A443-EF90547E7CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2CB3A6-096C-437F-A443-EF90547E7CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25ED1379-65C9-4774-96BF-49B63A13AB83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25ED1379-65C9-4774-96BF-49B63A13AB83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25ED1379-65C9-4774-96BF-49B63A13AB83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9243A282-A33E-4A8B-8A26-DC9FD91F4B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9243A282-A33E-4A8B-8A26-DC9FD91F4B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9243A282-A33E-4A8B-8A26-DC9FD91F4B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9243A282-A33E-4A8B-8A26-DC9FD91F4B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{027737F3-3CBC-487F-9C3F-F4780A375E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027737F3-3CBC-487F-9C3F-F4780A375E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027737F3-3CBC-487F-9C3F-F4780A375E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027737F3-3CBC-487F-9C3F-F4780A375E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F66334-BBBE-4FBC-838F-9626935B9D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F66334-BBBE-4FBC-838F-9626935B9D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F66334-BBBE-4FBC-838F-9626935B9D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F66334-BBBE-4FBC-838F-9626935B9D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4F0C97-1F64-40DC-908B-332A15FF9A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4F0C97-1F64-40DC-908B-332A15FF9A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4F0C97-1F64-40DC-908B-332A15FF9A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4F0C97-1F64-40DC-908B-332A15FF9A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9294BF4A-A557-405C-B1D8-B8C5F0D3CBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9294BF4A-A557-405C-B1D8-B8C5F0D3CBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9294BF4A-A557-405C-B1D8-B8C5F0D3CBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9294BF4A-A557-405C-B1D8-B8C5F0D3CBB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45356469-AFF5-4D11-BBAA-CC6B5F7CC4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45356469-AFF5-4D11-BBAA-CC6B5F7CC4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45356469-AFF5-4D11-BBAA-CC6B5F7CC4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45356469-AFF5-4D11-BBAA-CC6B5F7CC4A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1495E677-70F7-4DC3-B44D-227649F8DF8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1495E677-70F7-4DC3-B44D-227649F8DF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1495E677-70F7-4DC3-B44D-227649F8DF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1495E677-70F7-4DC3-B44D-227649F8DF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB7D6E53-37FB-468B-BCA2-FBCDD4117A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB7D6E53-37FB-468B-BCA2-FBCDD4117A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB7D6E53-37FB-468B-BCA2-FBCDD4117A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB7D6E53-37FB-468B-BCA2-FBCDD4117A89}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A94A50E-06DC-43C1-80B5-B662820EC3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A94A50E-06DC-43C1-80B5-B662820EC3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A94A50E-06DC-43C1-80B5-B662820EC3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -198,24 +194,24 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{107237a4-ee90-491f-aa96-e8e544b2da1b} = {eb407bf4-5b01-4624-940b-101b01bcc823}
-		{62c350fe-3ece-482f-b510-faf722c35dad} = {eb407bf4-5b01-4624-940b-101b01bcc823}
-		{a5ccdf13-328f-470f-90f4-fa5ca18ac49f} = {eb407bf4-5b01-4624-940b-101b01bcc823}
-		{136d6ac9-f7b0-436d-88ec-c71481ed173f} = {eb407bf4-5b01-4624-940b-101b01bcc823}
-		{0329fb51-497d-47c5-a09c-08fc3af958aa} = {eb407bf4-5b01-4624-940b-101b01bcc823}
-		{8a2cb3a6-096c-437f-a443-ef90547e7cf7} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{25ed1379-65c9-4774-96bf-49b63a13ab83} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{9243a282-a33e-4a8b-8a26-dc9fd91f4b82} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{027737f3-3cbc-487f-9c3f-f4780a375e2c} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{37f66334-bbbe-4fbc-838f-9626935b9d01} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{db4f0c97-1f64-40dc-908b-332a15ff9a21} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{9294bf4a-a557-405c-b1d8-b8c5f0d3cbb1} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{45356469-aff5-4d11-bbaa-cc6b5f7cc4a8} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{1495e677-70f7-4dc3-b44d-227649f8df8e} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{cb7d6e53-37fb-468b-bca2-fbcdd4117a89} = {f86c1f82-ebba-41e8-a2d3-fe364839fe4d}
-		{eb407bf4-5b01-4624-940b-101b01bcc823} = {04DBDB01-70F4-4E06-B468-8F87850B22BE}
-		{f86c1f82-ebba-41e8-a2d3-fe364839fe4d} = {ddb030d4-6f8b-4def-bc9d-8afa1c44d566}
 		{554AD327-6DBA-4F8F-96F8-81CE7A0C863F} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
+		{107237A4-EE90-491F-AA96-E8E544B2DA1B} = {EB407BF4-5B01-4624-940B-101B01BCC823}
+		{62C350FE-3ECE-482F-B510-FAF722C35DAD} = {EB407BF4-5B01-4624-940B-101B01BCC823}
+		{A5CCDF13-328F-470F-90F4-FA5CA18AC49F} = {EB407BF4-5B01-4624-940B-101B01BCC823}
+		{136D6AC9-F7B0-436D-88EC-C71481ED173F} = {EB407BF4-5B01-4624-940B-101B01BCC823}
+		{0329FB51-497D-47C5-A09C-08FC3AF958AA} = {EB407BF4-5B01-4624-940B-101B01BCC823}
+		{8A2CB3A6-096C-437F-A443-EF90547E7CF7} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{25ED1379-65C9-4774-96BF-49B63A13AB83} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{9243A282-A33E-4A8B-8A26-DC9FD91F4B82} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{027737F3-3CBC-487F-9C3F-F4780A375E2C} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{37F66334-BBBE-4FBC-838F-9626935B9D01} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{DB4F0C97-1F64-40DC-908B-332A15FF9A21} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{9294BF4A-A557-405C-B1D8-B8C5F0D3CBB1} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{45356469-AFF5-4D11-BBAA-CC6B5F7CC4A8} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{1495E677-70F7-4DC3-B44D-227649F8DF8E} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{CB7D6E53-37FB-468B-BCA2-FBCDD4117A89} = {F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}
+		{EB407BF4-5B01-4624-940B-101B01BCC823} = {04DBDB01-70F4-4E06-B468-8F87850B22BE}
+		{F86C1F82-EBBA-41E8-A2D3-FE364839FE4D} = {DDB030D4-6F8B-4DEF-BC9D-8AFA1C44D566}
 		{1A94A50E-06DC-43C1-80B5-B662820EC3EB} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{C956DD76-69C8-4A9C-83EA-D17DF83340FD} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{50B2631D-129C-47B3-A587-029CCD6099BC} = {04DBDB01-70F4-4E06-B468-8F87850B22BE}
