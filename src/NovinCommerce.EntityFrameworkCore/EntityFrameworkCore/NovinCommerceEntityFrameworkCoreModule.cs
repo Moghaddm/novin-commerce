@@ -13,6 +13,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using NovinCm.ProductManagement.EntityFrameworkCore;
+using NovinCm.FileManagement.EntityFrameworkCore;
 
 namespace NovinCommerce.EntityFrameworkCore;
 
@@ -29,6 +30,7 @@ namespace NovinCommerce.EntityFrameworkCore;
     typeof(AbpFeatureManagementEntityFrameworkCoreModule)
     )]
 [DependsOn(typeof(ProductManagementEntityFrameworkCoreModule))]
+    [DependsOn(typeof(FileManagementEntityFrameworkCoreModule))]
     public class NovinCommerceEntityFrameworkCoreModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

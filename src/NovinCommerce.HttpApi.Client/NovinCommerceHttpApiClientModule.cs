@@ -8,6 +8,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.VirtualFileSystem;
 using NovinCm.ProductManagement;
+using NovinCm.FileManagement;
 
 
 namespace NovinCommerce;

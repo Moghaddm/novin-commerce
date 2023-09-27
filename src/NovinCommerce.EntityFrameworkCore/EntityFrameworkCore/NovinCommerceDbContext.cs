@@ -17,6 +17,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using NovinCm.ProductManagement.EntityFrameworkCore;
+using NovinCm.FileManagement.EntityFrameworkCore;
 
 namespace NovinCommerce.EntityFrameworkCore;
 
@@ -122,5 +123,6 @@ public class NovinCommerceDbContext :
         //    //...
         //});
             builder.ConfigureProductManagement();
+            builder.ConfigureFileManagement();
         }
 }

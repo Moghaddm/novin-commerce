@@ -15,6 +15,7 @@ using Volo.Abp.PermissionManagement.OpenIddict;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using NovinCm.ProductManagement;
+using NovinCm.FileManagement;
 
 namespace NovinCommerce;
 
@@ -32,6 +33,7 @@ namespace NovinCommerce;
     typeof(AbpEmailingModule)
 )]
 [DependsOn(typeof(ProductManagementDomainModule))]
+    [DependsOn(typeof(FileManagementDomainModule))]
     public class NovinCommerceDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

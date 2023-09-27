@@ -10,6 +10,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using NovinCm.ProductManagement;
 using Volo.Abp.AspNetCore.Mvc;
+using NovinCm.FileManagement;
 
 
 namespace NovinCommerce;
@@ -24,6 +25,7 @@ namespace NovinCommerce;
     typeof(AbpSettingManagementHttpApiModule)
     )]
 [DependsOn(typeof(ProductManagementHttpApiModule))]
+    [DependsOn(typeof(FileManagementHttpApiModule))]
     public class NovinCommerceHttpApiModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
