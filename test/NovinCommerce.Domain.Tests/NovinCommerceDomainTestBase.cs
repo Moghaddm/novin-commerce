@@ -2,5 +2,4 @@
 
 public abstract class NovinCommerceDomainTestBase : NovinCommerceTestBase<NovinCommerceDomainTestModule>
 {
-
 }

@@ -12,7 +12,7 @@ namespace NovinCommerce.HttpApi.Client.ConsoleTestApp;
     typeof(AbpAutofacModule),
     typeof(NovinCommerceHttpApiClientModule),
     typeof(AbpHttpClientIdentityModelModule)
-    )]
+)]
 public class NovinCommerceConsoleApiClientModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

@@ -1,45 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29020.237
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCommerce.Domain", "src\NovinCommerce.Domain\NovinCommerce.Domain.csproj", "{554AD327-6DBA-4F8F-96F8-81CE7A0C863F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.TestBase", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.TestBase\NovinCm.ProductManagement.TestBase.csproj", "{107237A4-EE90-491F-AA96-E8E544B2DA1B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp.csproj", "{62C350FE-3ECE-482F-B510-FAF722C35DAD}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.EntityFrameworkCore.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.EntityFrameworkCore.Tests\NovinCm.ProductManagement.EntityFrameworkCore.Tests.csproj", "{A5CCDF13-328F-470F-90F4-FA5CA18AC49F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.Domain.Tests\NovinCm.ProductManagement.Domain.Tests.csproj", "{136D6AC9-F7B0-436D-88EC-C71481ED173F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application.Tests", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.Application.Tests\NovinCm.ProductManagement.Application.Tests.csproj", "{0329FB51-497D-47C5-A09C-08FC3AF958AA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Installer", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Installer\NovinCm.ProductManagement.Installer.csproj", "{8A2CB3A6-096C-437F-A443-EF90547E7CF7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi.Client", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.HttpApi.Client\NovinCm.ProductManagement.HttpApi.Client.csproj", "{25ED1379-65C9-4774-96BF-49B63A13AB83}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.HttpApi\NovinCm.ProductManagement.HttpApi.csproj", "{9243A282-A33E-4A8B-8A26-DC9FD91F4B82}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.EntityFrameworkCore", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.EntityFrameworkCore\NovinCm.ProductManagement.EntityFrameworkCore.csproj", "{027737F3-3CBC-487F-9C3F-F4780A375E2C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain.Shared", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain.Shared\NovinCm.ProductManagement.Domain.Shared.csproj", "{37F66334-BBBE-4FBC-838F-9626935B9D01}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Domain", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain\NovinCm.ProductManagement.Domain.csproj", "{DB4F0C97-1F64-40DC-908B-332A15FF9A21}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Blazor.Server", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Blazor.Server\NovinCm.ProductManagement.Blazor.Server.csproj", "{9294BF4A-A557-405C-B1D8-B8C5F0D3CBB1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Blazor", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Blazor\NovinCm.ProductManagement.Blazor.csproj", "{45356469-AFF5-4D11-BBAA-CC6B5F7CC4A8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application.Contracts", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application.Contracts\NovinCm.ProductManagement.Application.Contracts.csproj", "{1495E677-70F7-4DC3-B44D-227649F8DF8E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.Application", "modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application\NovinCm.ProductManagement.Application.csproj", "{CB7D6E53-37FB-468B-BCA2-FBCDD4117A89}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NovinCm.ProductManagement.Tests", "NovinCm.ProductManagement.Tests", "{EB407BF4-5B01-4624-940B-101B01BCC823}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NovinCm.ProductManagement", "NovinCm.ProductManagement", "{F86C1F82-EBBA-41E8-A2D3-FE364839FE4D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{DDB030D4-6F8B-4DEF-BC9D-8AFA1C44D566}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp", "modules\NovinCm.ProductManagement\test\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp\NovinCm.ProductManagement.HttpApi.Client.ConsoleTestApp.csproj", "{62C350FE-3ECE-482F-B510-FAF722C35DAD}"
 EndProject

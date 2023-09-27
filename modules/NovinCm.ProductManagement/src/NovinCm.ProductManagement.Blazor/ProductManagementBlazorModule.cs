@@ -12,7 +12,7 @@ namespace NovinCm.ProductManagement.Blazor;
     typeof(ProductManagementApplicationContractsModule),
     typeof(AbpAspNetCoreComponentsWebThemingModule),
     typeof(AbpAutoMapperModule)
-    )]
+)]
 public class ProductManagementBlazorModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
@@ -21,7 +21,7 @@ public class ProductManagementBlazorModule : AbpModule
 
         Configure<AbpAutoMapperOptions>(options =>
         {
-            options.AddProfile<ProductManagementBlazorAutoMapperProfile>(validate: true);
+            options.AddProfile<ProductManagementBlazorAutoMapperProfile>(true);
         });
 
         Configure<AbpNavigationOptions>(options =>

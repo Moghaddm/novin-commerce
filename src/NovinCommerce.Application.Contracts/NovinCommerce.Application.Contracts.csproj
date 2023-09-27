@@ -10,7 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NovinCommerce.Domain.Shared\NovinCommerce.Domain.Shared.csproj" />
-  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application.Contracts\NovinCm.ProductManagement.Application.Contracts.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Application.Contracts\NovinCm.FileManagement.Application.Contracts.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Application.Contracts\NovinCm.FileManagement.Application.Contracts.csproj" /></ItemGroup>
+	  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application.Contracts\NovinCm.ProductManagement.Application.Contracts.csproj" ></ProjectReference>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.ObjectExtending" Version="7.3.3" />

@@ -8,7 +8,7 @@ namespace NovinCommerce.DbMigrator;
     typeof(AbpAutofacModule),
     typeof(NovinCommerceEntityFrameworkCoreModule),
     typeof(NovinCommerceApplicationContractsModule)
-    )]
+)]
 public class NovinCommerceDbMigratorModule : AbpModule
 {
 }

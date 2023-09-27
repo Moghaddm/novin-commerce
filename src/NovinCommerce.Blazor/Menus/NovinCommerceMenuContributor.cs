@@ -13,7 +13,9 @@ public class NovinCommerceMenuContributor : IMenuContributor
     public async Task ConfigureMenuAsync(MenuConfigurationContext context)
     {
         if (context.Menu.Name == StandardMenus.Main)
+        {
             await ConfigureMainMenuAsync(context);
+        }
     }
 
     private Task ConfigureMainMenuAsync(MenuConfigurationContext context)
@@ -27,15 +29,19 @@ public class NovinCommerceMenuContributor : IMenuContributor
                 NovinCommerceMenus.Home,
                 l["Menu:Home"],
                 "/",
-                icon: "fas fa-home",
-                order: 0
+                "fas fa-home",
+                0
             )
         );
 
         if (MultiTenancyConsts.IsEnabled)
+        {
             administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);
+        }
         else
+        {
             administration.TryRemoveMenuItem(TenantManagementMenuNames.GroupName);
+        }
 
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenus.GroupName, 3);

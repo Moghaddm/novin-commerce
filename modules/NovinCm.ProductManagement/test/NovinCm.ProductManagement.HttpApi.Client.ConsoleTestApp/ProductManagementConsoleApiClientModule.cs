@@ -8,8 +8,7 @@ namespace NovinCm.ProductManagement;
     typeof(AbpAutofacModule),
     typeof(ProductManagementHttpApiClientModule),
     typeof(AbpHttpClientIdentityModelModule)
-    )]
+)]
 public class ProductManagementConsoleApiClientModule : AbpModule
 {
-
 }

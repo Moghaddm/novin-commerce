@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace NovinCommerce.Products;
 
-namespace NovinCommerce.Products
+public enum ProductStockState
 {
-    public enum ProductStockState
-    {
-        InStock,
-        NotAvailable,
-        Stopped
-    }
+    InStock,
+    NotAvailable,
+    Stopped
 }

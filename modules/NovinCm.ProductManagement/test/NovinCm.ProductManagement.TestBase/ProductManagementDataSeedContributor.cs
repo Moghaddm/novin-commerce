@@ -8,8 +8,8 @@ namespace NovinCm.ProductManagement;
 
 public class ProductManagementDataSeedContributor : IDataSeedContributor, ITransientDependency
 {
-    private readonly IGuidGenerator _guidGenerator;
     private readonly ICurrentTenant _currentTenant;
+    private readonly IGuidGenerator _guidGenerator;
 
     public ProductManagementDataSeedContributor(
         IGuidGenerator guidGenerator, ICurrentTenant currentTenant)

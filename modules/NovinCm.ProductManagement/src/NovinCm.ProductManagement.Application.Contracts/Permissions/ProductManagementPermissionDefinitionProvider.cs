@@ -10,17 +10,24 @@ public class ProductManagementPermissionDefinitionProvider : PermissionDefinitio
     {
         var productGroup = context.AddGroup(ProductManagementPermissions.GroupProductManagementName);
 
-        var productPermission = productGroup.AddPermission(ProductManagementPermissions.Products.Default, L("Permission:ProductManagement"));
+        var productPermission = productGroup.AddPermission(ProductManagementPermissions.Products.Default,
+            L("Permission:ProductManagement"));
 
-        productPermission.AddChild(ProductManagementPermissions.Products.Create, L("Permission:ProductManagement:Create"));
-        productPermission.AddChild(ProductManagementPermissions.Products.Delete, L("Permission:ProductManagement:Delete"));
+        productPermission.AddChild(ProductManagementPermissions.Products.Create,
+            L("Permission:ProductManagement:Create"));
+        productPermission.AddChild(ProductManagementPermissions.Products.Delete,
+            L("Permission:ProductManagement:Delete"));
         productPermission.AddChild(ProductManagementPermissions.Products.Edit, L("Permission:ProductManagement:Edit"));
 
-        var categoryPermission = productGroup.AddPermission(ProductManagementPermissions.Categories.Default, L("Permission:CategoryManagement"));
+        var categoryPermission = productGroup.AddPermission(ProductManagementPermissions.Categories.Default,
+            L("Permission:CategoryManagement"));
 
-        categoryPermission.AddChild(ProductManagementPermissions.Categories.Create, L("Permission:CategoryManagement:Create"));
-        categoryPermission.AddChild(ProductManagementPermissions.Categories.Delete, L("Permission:CategoryManagement:Delete"));
-        categoryPermission.AddChild(ProductManagementPermissions.Categories.Edit, L("Permission:CategoryManagement:Edit"));
+        categoryPermission.AddChild(ProductManagementPermissions.Categories.Create,
+            L("Permission:CategoryManagement:Create"));
+        categoryPermission.AddChild(ProductManagementPermissions.Categories.Delete,
+            L("Permission:CategoryManagement:Delete"));
+        categoryPermission.AddChild(ProductManagementPermissions.Categories.Edit,
+            L("Permission:CategoryManagement:Edit"));
     }
 
     private static LocalizableString L(string name)

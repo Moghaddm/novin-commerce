@@ -5,5 +5,4 @@ namespace NovinCommerce.Localization;
 [LocalizationResourceName("NovinCommerce")]
 public class NovinCommerceResource
 {
-
 }

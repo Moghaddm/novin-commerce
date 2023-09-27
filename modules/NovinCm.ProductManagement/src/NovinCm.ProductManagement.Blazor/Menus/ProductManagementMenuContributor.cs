@@ -17,7 +17,8 @@ public class ProductManagementMenuContributor : IMenuContributor
     private Task ConfigureMainMenuAsync(MenuConfigurationContext context)
     {
         //Add main menu items.
-        context.Menu.AddItem(new ApplicationMenuItem(ProductManagementMenus.Prefix, displayName: "Product Management", "/ProductManagement", icon: "fas fa-shopping-cart").RequireAuthenticated());
+        context.Menu.AddItem(new ApplicationMenuItem(ProductManagementMenus.Prefix, "Product Management",
+            "/ProductManagement", "fas fa-shopping-cart").RequireAuthenticated());
 
         return Task.CompletedTask;
     }

@@ -11,9 +11,9 @@ namespace NovinCm.ProductManagement;
 
 public class ClientDemoService : ITransientDependency
 {
-    private readonly ISampleAppService _sampleAppService;
     private readonly IIdentityModelAuthenticationService _authenticationService;
     private readonly IConfiguration _configuration;
+    private readonly ISampleAppService _sampleAppService;
 
     public ClientDemoService(
         ISampleAppService sampleAppService,

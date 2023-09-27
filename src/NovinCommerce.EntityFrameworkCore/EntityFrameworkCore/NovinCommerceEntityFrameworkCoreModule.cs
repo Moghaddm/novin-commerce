@@ -1,6 +1,5 @@
-using System;
 using Microsoft.Extensions.DependencyInjection;
-using Volo.Abp.Uow;
+using NovinCm.ProductManagement.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
@@ -12,8 +11,6 @@ using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
-using NovinCm.ProductManagement.EntityFrameworkCore;
-using NovinCm.FileManagement.EntityFrameworkCore;
 
 namespace NovinCommerce.EntityFrameworkCore;
 
@@ -28,10 +25,9 @@ namespace NovinCommerce.EntityFrameworkCore;
     typeof(AbpAuditLoggingEntityFrameworkCoreModule),
     typeof(AbpTenantManagementEntityFrameworkCoreModule),
     typeof(AbpFeatureManagementEntityFrameworkCoreModule)
-    )]
+)]
 [DependsOn(typeof(ProductManagementEntityFrameworkCoreModule))]
-    [DependsOn(typeof(FileManagementEntityFrameworkCoreModule))]
-    public class NovinCommerceEntityFrameworkCoreModule : AbpModule
+public class NovinCommerceEntityFrameworkCoreModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
@@ -42,17 +38,16 @@ namespace NovinCommerce.EntityFrameworkCore;
     {
         context.Services.AddAbpDbContext<NovinCommerceDbContext>(options =>
         {
-                /* Remove "includeAllEntities: true" to create
-                 * default repositories only for aggregate roots */
-            options.AddDefaultRepositories(includeAllEntities: true);
+            /* Remove "includeAllEntities: true" to create
+             * default repositories only for aggregate roots */
+            options.AddDefaultRepositories(true);
         });
 
         Configure<AbpDbContextOptions>(options =>
         {
-                /* The main point to change your DBMS.
-                 * See also NovinCommerceMigrationsDbContextFactory for EF Core tooling. */
+            /* The main point to change your DBMS.
+             * See also NovinCommerceMigrationsDbContextFactory for EF Core tooling. */
             options.UseSqlServer();
         });
-
     }
 }

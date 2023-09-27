@@ -19,7 +19,7 @@
     <PackageReference Include="Volo.Abp.TenantManagement.EntityFrameworkCore" Version="7.3.3" />
     <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="7.3.3" />
     <PackageReference Include="Volo.Abp.OpenIddict.EntityFrameworkCore" Version="7.3.3" />
-  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.EntityFrameworkCore\NovinCm.ProductManagement.EntityFrameworkCore.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.EntityFrameworkCore\NovinCm.FileManagement.EntityFrameworkCore.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.EntityFrameworkCore\NovinCm.FileManagement.EntityFrameworkCore.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.EntityFrameworkCore\NovinCm.ProductManagement.EntityFrameworkCore.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">

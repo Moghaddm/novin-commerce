@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NovinCommerce.Domain.Shared\NovinCommerce.Domain.Shared.csproj" />
-  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain\NovinCm.ProductManagement.Domain.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Domain\NovinCm.FileManagement.Domain.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Domain\NovinCm.FileManagement.Domain.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain\NovinCm.ProductManagement.Domain.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Emailing" Version="7.3.3" />

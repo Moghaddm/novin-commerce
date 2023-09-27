@@ -12,8 +12,8 @@ namespace NovinCommerce.Samples;
  */
 public class SampleDomainTests : NovinCommerceDomainTestBase
 {
-    private readonly IIdentityUserRepository _identityUserRepository;
     private readonly IdentityUserManager _identityUserManager;
+    private readonly IIdentityUserRepository _identityUserRepository;
 
     public SampleDomainTests()
     {

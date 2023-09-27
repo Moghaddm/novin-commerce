@@ -7,5 +7,4 @@ public class NovinCommerceMenus
     public const string Product = Prefix + ".Product";
 
     //Add your menu items here...
-
 }

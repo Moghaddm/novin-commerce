@@ -14,20 +14,16 @@ namespace NovinCommerce;
     typeof(AbpTestBaseModule),
     typeof(AbpAuthorizationModule),
     typeof(NovinCommerceDomainModule)
-    )]
+)]
 public class NovinCommerceTestBaseModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
-
     }
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        Configure<AbpBackgroundJobOptions>(options =>
-        {
-            options.IsJobExecutionEnabled = false;
-        });
+        Configure<AbpBackgroundJobOptions>(options => { options.IsJobExecutionEnabled = false; });
 
         context.Services.AddAlwaysAllowAuthorization();
     }

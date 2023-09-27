@@ -6,8 +6,7 @@ namespace NovinCm.ProductManagement.Blazor.Server;
 [DependsOn(
     typeof(AbpAspNetCoreComponentsServerThemingModule),
     typeof(ProductManagementBlazorModule)
-    )]
+)]
 public class ProductManagementBlazorServerModule : AbpModule
 {
-
 }

@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using NovinCm.ProductManagement.Blazor.Server;
 using NovinCommerce.Blazor.Menus;
 using NovinCommerce.EntityFrameworkCore;
 using NovinCommerce.Localization;
@@ -18,31 +19,23 @@ using Volo.Abp;
 using Volo.Abp.Account.Web;
 using Volo.Abp.AspNetCore.Components.Server.LeptonXLiteTheme;
 using Volo.Abp.AspNetCore.Components.Server.LeptonXLiteTheme.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
 using Volo.Abp.AspNetCore.Components.Web.Theming.Routing;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.Localization;
-using Volo.Abp.AspNetCore.Mvc.UI;
-using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Identity.Blazor.Server;
-using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.SettingManagement.Blazor.Server;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.TenantManagement.Blazor.Server;
-using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
-using NovinCm.ProductManagement.Blazor.Server;
-using NovinCm.FileManagement.Blazor.Server;
 
 namespace NovinCommerce.Blazor;
 
@@ -59,10 +52,9 @@ namespace NovinCommerce.Blazor;
     typeof(AbpIdentityBlazorServerModule),
     typeof(AbpTenantManagementBlazorServerModule),
     typeof(AbpSettingManagementBlazorServerModule)
-   )]
+)]
 [DependsOn(typeof(ProductManagementBlazorServerModule))]
-[DependsOn(typeof(FileManagementBlazorServerModule))]
-    public class NovinCommerceBlazorModule : AbpModule
+public class NovinCommerceBlazorModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
@@ -108,7 +100,8 @@ namespace NovinCommerce.Blazor;
 
     private void ConfigureAuthentication(ServiceConfigurationContext context)
     {
-        context.Services.ForwardIdentityAuthenticationForBearer(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme);
+        context.Services.ForwardIdentityAuthenticationForBearer(OpenIddictValidationAspNetCoreDefaults
+            .AuthenticationScheme);
     }
 
     private void ConfigureUrls(IConfiguration configuration)
@@ -116,7 +109,8 @@ namespace NovinCommerce.Blazor;
         Configure<AppUrlOptions>(options =>
         {
             options.Applications["MVC"].RootUrl = configuration["App:SelfUrl"];
-            options.RedirectAllowedUrls.AddRange(configuration["App:RedirectAllowedUrls"]?.Split(',') ?? Array.Empty<string>());
+            options.RedirectAllowedUrls.AddRange(configuration["App:RedirectAllowedUrls"]?.Split(',') ??
+                                                 Array.Empty<string>());
         });
     }
 
@@ -127,10 +121,7 @@ namespace NovinCommerce.Blazor;
             // MVC UI
             options.StyleBundles.Configure(
                 LeptonXLiteThemeBundles.Styles.Global,
-                bundle =>
-                {
-                    bundle.AddFiles("/global-styles.css");
-                }
+                bundle => { bundle.AddFiles("/global-styles.css"); }
             );
 
             //BLAZOR UI
@@ -152,11 +143,20 @@ namespace NovinCommerce.Blazor;
         {
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}NovinCommerce.Domain.Shared"));
-                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}NovinCommerce.Domain"));
-                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}NovinCommerce.Application.Contracts"));
-                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}NovinCommerce.Application"));
-                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceBlazorModule>(hostingEnvironment.ContentRootPath);
+                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceDomainSharedModule>(
+                    Path.Combine(hostingEnvironment.ContentRootPath,
+                        $"..{Path.DirectorySeparatorChar}NovinCommerce.Domain.Shared"));
+                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceDomainModule>(
+                    Path.Combine(hostingEnvironment.ContentRootPath,
+                        $"..{Path.DirectorySeparatorChar}NovinCommerce.Domain"));
+                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceApplicationContractsModule>(
+                    Path.Combine(hostingEnvironment.ContentRootPath,
+                        $"..{Path.DirectorySeparatorChar}NovinCommerce.Application.Contracts"));
+                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceApplicationModule>(
+                    Path.Combine(hostingEnvironment.ContentRootPath,
+                        $"..{Path.DirectorySeparatorChar}NovinCommerce.Application"));
+                options.FileSets.ReplaceEmbeddedByPhysical<NovinCommerceBlazorModule>(
+                    hostingEnvironment.ContentRootPath);
             });
         }
     }
@@ -190,10 +190,7 @@ namespace NovinCommerce.Blazor;
 
     private void ConfigureRouter(ServiceConfigurationContext context)
     {
-        Configure<AbpRouterOptions>(options =>
-        {
-            options.AppAssembly = typeof(NovinCommerceBlazorModule).Assembly;
-        });
+        Configure<AbpRouterOptions>(options => { options.AppAssembly = typeof(NovinCommerceBlazorModule).Assembly; });
     }
 
     private void ConfigureAutoApiControllers()
@@ -206,10 +203,7 @@ namespace NovinCommerce.Blazor;
 
     private void ConfigureAutoMapper()
     {
-        Configure<AbpAutoMapperOptions>(options =>
-        {
-            options.AddMaps<NovinCommerceBlazorModule>();
-        });
+        Configure<AbpAutoMapperOptions>(options => { options.AddMaps<NovinCommerceBlazorModule>(); });
     }
 
     public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -244,10 +238,7 @@ namespace NovinCommerce.Blazor;
         app.UseUnitOfWork();
         app.UseAuthorization();
         app.UseSwagger();
-        app.UseAbpSwaggerUI(options =>
-        {
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "NovinCommerce API");
-        });
+        app.UseAbpSwaggerUI(options => { options.SwaggerEndpoint("/swagger/v1/swagger.json", "NovinCommerce API"); });
         app.UseConfiguredEndpoints();
     }
 }

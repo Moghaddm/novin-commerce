@@ -9,8 +9,7 @@ namespace NovinCm.ProductManagement;
  */
 [DependsOn(
     typeof(ProductManagementEntityFrameworkCoreTestModule)
-    )]
+)]
 public class ProductManagementDomainTestModule : AbpModule
 {
-
 }

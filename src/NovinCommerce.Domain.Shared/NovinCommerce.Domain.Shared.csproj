@@ -18,7 +18,7 @@
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" Version="7.3.3" />
     <PackageReference Include="Volo.Abp.SettingManagement.Domain.Shared" Version="7.3.3" />
     <PackageReference Include="Volo.Abp.OpenIddict.Domain.Shared" Version="7.3.3" />
-  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain.Shared\NovinCm.ProductManagement.Domain.Shared.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Domain.Shared\NovinCm.FileManagement.Domain.Shared.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Domain.Shared\NovinCm.FileManagement.Domain.Shared.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Domain.Shared\NovinCm.ProductManagement.Domain.Shared.csproj" /></ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\NovinCommerce\*.json" />

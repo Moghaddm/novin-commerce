@@ -14,7 +14,6 @@ public class ProductManagementDbContext : AbpDbContext<ProductManagementDbContex
     public ProductManagementDbContext(DbContextOptions<ProductManagementDbContext> options)
         : base(options)
     {
-
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

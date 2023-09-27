@@ -17,7 +17,7 @@ namespace NovinCommerce.EntityFrameworkCore;
     typeof(NovinCommerceEntityFrameworkCoreModule),
     typeof(NovinCommerceTestBaseModule),
     typeof(AbpEntityFrameworkCoreSqliteModule)
-    )]
+)]
 public class NovinCommerceEntityFrameworkCoreTestModule : AbpModule
 {
     private SqliteConnection? _sqliteConnection;
@@ -45,10 +45,7 @@ public class NovinCommerceEntityFrameworkCoreTestModule : AbpModule
 
         services.Configure<AbpDbContextOptions>(options =>
         {
-            options.Configure(context =>
-            {
-                context.DbContextOptions.UseSqlite(_sqliteConnection);
-            });
+            options.Configure(context => { context.DbContextOptions.UseSqlite(_sqliteConnection); });
         });
     }
 

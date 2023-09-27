@@ -1,8 +1,6 @@
-﻿using Volo.Abp;
+﻿namespace NovinCommerce.EntityFrameworkCore;
 
-namespace NovinCommerce.EntityFrameworkCore;
-
-public abstract class NovinCommerceEntityFrameworkCoreTestBase : NovinCommerceTestBase<NovinCommerceEntityFrameworkCoreTestModule>
+public abstract class
+    NovinCommerceEntityFrameworkCoreTestBase : NovinCommerceTestBase<NovinCommerceEntityFrameworkCoreTestModule>
 {
-
 }

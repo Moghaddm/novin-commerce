@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Application;
-using Volo.Abp.Modularity;
 using Volo.Abp.Authorization;
+using Volo.Abp.Modularity;
 
 namespace NovinCm.ProductManagement;
 
@@ -8,8 +8,7 @@ namespace NovinCm.ProductManagement;
     typeof(ProductManagementDomainSharedModule),
     typeof(AbpDddApplicationContractsModule),
     typeof(AbpAuthorizationModule)
-    )]
+)]
 public class ProductManagementApplicationContractsModule : AbpModule
 {
-
 }

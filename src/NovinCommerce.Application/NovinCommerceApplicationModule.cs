@@ -1,3 +1,4 @@
+using NovinCm.ProductManagement;
 using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
@@ -7,9 +8,6 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using NovinCm.ProductManagement;
-using NovinCm.FileManagement;
-
 
 namespace NovinCommerce;
 
@@ -22,17 +20,13 @@ namespace NovinCommerce;
     typeof(AbpTenantManagementApplicationModule),
     typeof(AbpFeatureManagementApplicationModule),
     typeof(AbpSettingManagementApplicationModule)
-    )]
+)]
 [DependsOn(typeof(ProductManagementApplicationModule))]
-    [DependsOn(typeof(FileManagementApplicationModule))]
-    public class NovinCommerceApplicationModule : AbpModule
+public class NovinCommerceApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        Configure<AbpAutoMapperOptions>(options =>
-        {
-            options.AddMaps<NovinCommerceApplicationModule>();
-        });
+        Configure<AbpAutoMapperOptions>(options => { options.AddMaps<NovinCommerceApplicationModule>(); });
 
         Configure<AbpSequentialGuidGeneratorOptions>(options =>
         {

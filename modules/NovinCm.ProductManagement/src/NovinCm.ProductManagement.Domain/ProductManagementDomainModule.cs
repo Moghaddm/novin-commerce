@@ -9,5 +9,4 @@ namespace NovinCm.ProductManagement;
 )]
 public class ProductManagementDomainModule : AbpModule
 {
-
 }

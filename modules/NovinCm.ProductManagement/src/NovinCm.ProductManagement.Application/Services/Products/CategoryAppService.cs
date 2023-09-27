@@ -1,67 +1,69 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using NovinCommerce.Entities.Categories;
-using NovinCommerce.Repositories.Products;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using NovinCm.ProductManagement.Models.Products;
 using NovinCm.ProductManagement.Permissions;
 using NovinCm.ProductManagement.Services.Products;
+using NovinCommerce.Entities.Categories;
+using NovinCommerce.Repositories.Products;
 using Volo.Abp.Application.Services;
 
-namespace NovinCommerce.Services.Products
+namespace NovinCommerce.Services.Products;
+
+[Authorize(ProductManagementPermissions.Categories.Default)]
+public class CategoryAppService : ApplicationService, ICategoryAppService
 {
-    [Authorize(ProductManagementPermissions.Categories.Default)]
-    public class CategoryAppService : ApplicationService, ICategoryAppService
+    private readonly ICategoryRepository _categoryRepository;
+
+    public CategoryAppService(ICategoryRepository categoryRepository)
     {
-        private readonly ICategoryRepository _categoryRepository;
+        _categoryRepository = categoryRepository;
+    }
 
-        public CategoryAppService(ICategoryRepository categoryRepository) => _categoryRepository = categoryRepository;
+    [Authorize(ProductManagementPermissions.Categories.Create)]
+    public async Task<CategoryDto> CreateAsync(CategoryDto inputCategory)
+    {
+        var category = new Category(inputCategory.Name, inputCategory.Description);
 
-        [Authorize(ProductManagementPermissions.Categories.Create)]
-        public async Task<CategoryDto> CreateAsync(CategoryDto inputCategory)
-        {
-            var category = new Category(inputCategory.Name, inputCategory.Description);
+        await _categoryRepository.InsertAsync(category);
 
-            await _categoryRepository.InsertAsync(category);
+        return inputCategory;
+    }
 
-            return inputCategory;
-        }
+    [Authorize(ProductManagementPermissions.Categories.Delete)]
+    public async Task DeleteAsync(Guid categoryId)
+    {
+        var category = await _categoryRepository.GetByIdAsync(categoryId);
 
-        [Authorize(ProductManagementPermissions.Categories.Delete)]
-        public async Task DeleteAsync(Guid categoryId)
-        {
-            var category = await _categoryRepository.GetByIdAsync(categoryId);
+        await _categoryRepository.DeleteAsync(category);
+    }
 
-            await _categoryRepository.DeleteAsync(category);
-        }
+    public async ValueTask<IEnumerable<CategoryDto>> GetAllAsync()
+    {
+        var categories = await _categoryRepository.GetListAsync();
 
-        public async ValueTask<IEnumerable<CategoryDto>> GetAllAsync()
-        {
-            var categories = await _categoryRepository.GetListAsync();
+        var outputCategories = categories.Select(c => new CategoryDto { Name = c.Name, Description = c.Description })
+            .ToList();
 
-            var outputCategories = categories.Select(c => new CategoryDto { Name = c.Name, Description = c.Description }).ToList();
+        return outputCategories;
+    }
 
-            return outputCategories;
-        }
+    public async ValueTask<CategoryDto> GetByIdAsync(Guid categoryId)
+    {
+        var category = await _categoryRepository.GetByIdAsync(categoryId);
 
-        public async ValueTask<CategoryDto> GetByIdAsync(Guid categoryId)
-        {
-            var category = await _categoryRepository.GetByIdAsync(categoryId);
+        var outputCategory = new CategoryDto { Name = category.Name, Description = category.Description };
 
-            var outputCategory = new CategoryDto { Name = category.Name, Description = category.Description };
+        return outputCategory;
+    }
 
-            return outputCategory;
-        }
+    [Authorize(ProductManagementPermissions.Categories.Edit)]
+    public async Task UpdateAsync(Guid categoryId, CategoryDto inputCategory)
+    {
+        var category = await _categoryRepository.GetByIdAsync(categoryId);
 
-        [Authorize(ProductManagementPermissions.Categories.Edit)]
-        public async Task UpdateAsync(Guid categoryId, CategoryDto inputCategory)
-        {
-            var category = await _categoryRepository.GetByIdAsync(categoryId);
-
-            category.Update(inputCategory.Name, inputCategory.Description);
-        }
+        category.Update(inputCategory.Name, inputCategory.Description);
     }
 }

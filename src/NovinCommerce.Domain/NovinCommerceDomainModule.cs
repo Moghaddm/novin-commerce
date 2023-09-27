@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using NovinCm.ProductManagement;
 using NovinCommerce.MultiTenancy;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
@@ -14,8 +15,6 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.OpenIddict;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using NovinCm.ProductManagement;
-using NovinCm.FileManagement;
 
 namespace NovinCommerce;
 
@@ -33,8 +32,7 @@ namespace NovinCommerce;
     typeof(AbpEmailingModule)
 )]
 [DependsOn(typeof(ProductManagementDomainModule))]
-    [DependsOn(typeof(FileManagementDomainModule))]
-    public class NovinCommerceDomainModule : AbpModule
+public class NovinCommerceDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
@@ -61,10 +59,7 @@ namespace NovinCommerce;
             options.Languages.Add(new LanguageInfo("fa", "fa", "فارسی"));
         });
 
-        Configure<AbpMultiTenancyOptions>(options =>
-        {
-            options.IsEnabled = MultiTenancyConsts.IsEnabled;
-        });
+        Configure<AbpMultiTenancyOptions>(options => { options.IsEnabled = MultiTenancyConsts.IsEnabled; });
 
 #if DEBUG
         context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());

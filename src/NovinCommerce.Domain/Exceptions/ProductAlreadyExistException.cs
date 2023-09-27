@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Volo.Abp;
+﻿using Volo.Abp;
 
-namespace NovinCommerce.Exceptions
+namespace NovinCommerce.Exceptions;
+
+public class ProductAlreadyExistException : BusinessException
 {
-    public class ProductAlreadyExistException : BusinessException
+    public ProductAlreadyExistException(string name) : base(NovinCommerceDomainErrorCodes.ProductAlreadyExist)
     {
-        public ProductAlreadyExistException(string name) : base(NovinCommerceDomainErrorCodes.ProductAlreadyExist)
-        { WithData(nameof(name), name); }
+        WithData(nameof(name), name);
     }
 }

@@ -5,5 +5,4 @@
  */
 public abstract class ProductManagementDomainTestBase : ProductManagementTestBase<ProductManagementDomainTestModule>
 {
-
 }

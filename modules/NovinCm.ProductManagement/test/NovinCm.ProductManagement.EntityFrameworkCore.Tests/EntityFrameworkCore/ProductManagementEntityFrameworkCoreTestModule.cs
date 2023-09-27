@@ -13,7 +13,7 @@ namespace NovinCm.ProductManagement.EntityFrameworkCore;
     typeof(ProductManagementTestBaseModule),
     typeof(ProductManagementEntityFrameworkCoreModule),
     typeof(AbpEntityFrameworkCoreSqliteModule)
-    )]
+)]
 public class ProductManagementEntityFrameworkCoreTestModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

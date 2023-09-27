@@ -17,12 +17,11 @@ namespace NovinCommerce.Data;
 
 public class NovinCommerceDbMigrationService : ITransientDependency
 {
-    public ILogger<NovinCommerceDbMigrationService> Logger { get; set; }
+    private readonly ICurrentTenant _currentTenant;
 
     private readonly IDataSeeder _dataSeeder;
     private readonly IEnumerable<INovinCommerceDbSchemaMigrator> _dbSchemaMigrators;
     private readonly ITenantRepository _tenantRepository;
-    private readonly ICurrentTenant _currentTenant;
 
     public NovinCommerceDbMigrationService(
         IDataSeeder dataSeeder,
@@ -38,6 +37,8 @@ public class NovinCommerceDbMigrationService : ITransientDependency
         Logger = NullLogger<NovinCommerceDbMigrationService>.Instance;
     }
 
+    public ILogger<NovinCommerceDbMigrationService> Logger { get; set; }
+
     public async Task MigrateAsync()
     {
         var initialMigrationAdded = AddInitialMigrationIfNotExist();
@@ -52,7 +53,7 @@ public class NovinCommerceDbMigrationService : ITransientDependency
         await MigrateDatabaseSchemaAsync();
         await SeedDataAsync();
 
-        Logger.LogInformation($"Successfully completed host database migrations.");
+        Logger.LogInformation("Successfully completed host database migrations.");
 
         var tenants = await _tenantRepository.GetListAsync(includeDetails: true);
 
@@ -101,8 +102,10 @@ public class NovinCommerceDbMigrationService : ITransientDependency
         Logger.LogInformation($"Executing {(tenant == null ? "host" : tenant.Name + " tenant")} database seed...");
 
         await _dataSeeder.SeedAsync(new DataSeedContext(tenant?.Id)
-            .WithProperty(IdentityDataSeedContributor.AdminEmailPropertyName, IdentityDataSeedContributor.AdminEmailDefaultValue)
-            .WithProperty(IdentityDataSeedContributor.AdminPasswordPropertyName, IdentityDataSeedContributor.AdminPasswordDefaultValue)
+            .WithProperty(IdentityDataSeedContributor.AdminEmailPropertyName,
+                IdentityDataSeedContributor.AdminEmailDefaultValue)
+            .WithProperty(IdentityDataSeedContributor.AdminPasswordPropertyName,
+                IdentityDataSeedContributor.AdminPasswordDefaultValue)
         );
     }
 
@@ -127,10 +130,8 @@ public class NovinCommerceDbMigrationService : ITransientDependency
                 AddInitialMigration();
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
         catch (Exception e)
         {
@@ -149,7 +150,8 @@ public class NovinCommerceDbMigrationService : ITransientDependency
     private bool MigrationsFolderExists()
     {
         var dbMigrationsProjectFolder = GetEntityFrameworkCoreProjectFolderPath();
-        return dbMigrationsProjectFolder != null && Directory.Exists(Path.Combine(dbMigrationsProjectFolder, "Migrations"));
+        return dbMigrationsProjectFolder != null &&
+               Directory.Exists(Path.Combine(dbMigrationsProjectFolder, "Migrations"));
     }
 
     private void AddInitialMigration()
@@ -207,7 +209,8 @@ public class NovinCommerceDbMigrationService : ITransientDependency
         {
             currentDirectory = Directory.GetParent(currentDirectory.FullName);
 
-            if (currentDirectory != null && Directory.GetFiles(currentDirectory.FullName).FirstOrDefault(f => f.EndsWith(".sln")) != null)
+            if (currentDirectory != null &&
+                Directory.GetFiles(currentDirectory.FullName).FirstOrDefault(f => f.EndsWith(".sln")) != null)
             {
                 return currentDirectory.FullName;
             }

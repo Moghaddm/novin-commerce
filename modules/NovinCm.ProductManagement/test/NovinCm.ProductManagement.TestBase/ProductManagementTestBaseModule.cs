@@ -13,7 +13,7 @@ namespace NovinCm.ProductManagement;
     typeof(AbpTestBaseModule),
     typeof(AbpAuthorizationModule),
     typeof(ProductManagementDomainModule)
-    )]
+)]
 public class ProductManagementTestBaseModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

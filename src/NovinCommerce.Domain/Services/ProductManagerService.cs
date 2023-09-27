@@ -1,37 +1,37 @@
-﻿using NovinCommerce.Entities.Products;
+﻿using System.Threading.Tasks;
+using NovinCommerce.Entities.Products;
 using NovinCommerce.Exceptions;
 using NovinCommerce.Repositories.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Volo.Abp.Domain.Services;
 
-namespace NovinCommerce.Services
+namespace NovinCommerce.Services;
+
+public class ProductManagerService : DomainService
 {
-    public class ProductManagerService : DomainService
+    private readonly IProductRepository _productRepository;
+
+    public ProductManagerService(IProductRepository productRepository)
     {
-        private readonly IProductRepository _productRepository;
+        _productRepository = productRepository;
+    }
 
-        public ProductManagerService(IProductRepository productRepository) => _productRepository = productRepository;
+    public async Task<Product> CreateAsync(Product inputProduct)
+    {
+        var products = await _productRepository.GetByCategoryTypeAsync(inputProduct.Category.Name);
 
-        public async Task<Product> CreateAsync(Product inputProduct)
+        if (await _productRepository.GetByNameAsync(products, inputProduct.Name) is not null)
         {
-            var products = await _productRepository.GetByCategoryTypeAsync(inputProduct.Category.Name);
-
-            if (await _productRepository.GetByNameAsync(products, inputProduct.Name) is not null)
-                throw new ProductAlreadyExistException(inputProduct.Name);
-
-            Product product = new(inputProduct.Name,
-                inputProduct.Description,
-                inputProduct.Price,
-                inputProduct.Quantity,
-                inputProduct.StockState,
-                inputProduct.Category,
-                inputProduct.Company);
-
-            return product;
+            throw new ProductAlreadyExistException(inputProduct.Name);
         }
+
+        Product product = new(inputProduct.Name,
+            inputProduct.Description,
+            inputProduct.Price,
+            inputProduct.Quantity,
+            inputProduct.StockState,
+            inputProduct.Category,
+            inputProduct.Company);
+
+        return product;
     }
 }

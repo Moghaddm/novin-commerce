@@ -11,7 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NovinCommerce.Domain\NovinCommerce.Domain.csproj" />
     <ProjectReference Include="..\NovinCommerce.Application.Contracts\NovinCommerce.Application.Contracts.csproj" />
-  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application\NovinCm.ProductManagement.Application.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Application\NovinCm.FileManagement.Application.csproj" /><ProjectReference Include="..\..\modules\NovinCm.FileManagement\src\NovinCm.FileManagement.Application\NovinCm.FileManagement.Application.csproj" /></ItemGroup>
+  <ProjectReference Include="..\..\modules\NovinCm.ProductManagement\src\NovinCm.ProductManagement.Application\NovinCm.ProductManagement.Application.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Account.Application" Version="7.3.3" />

@@ -5,8 +5,7 @@ namespace NovinCommerce;
 
 [DependsOn(
     typeof(NovinCommerceEntityFrameworkCoreTestModule)
-    )]
+)]
 public class NovinCommerceDomainTestModule : AbpModule
 {
-
 }

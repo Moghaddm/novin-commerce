@@ -13,11 +13,6 @@ public abstract class SampleRepository_Tests<TStartupModule> : ProductManagement
 {
     //private readonly ISampleRepository _sampleRepository;
 
-    protected SampleRepository_Tests()
-    {
-        //_sampleRepository = GetRequiredService<ISampleRepository>();
-    }
-
     [Fact]
     public Task Method1Async()
     {

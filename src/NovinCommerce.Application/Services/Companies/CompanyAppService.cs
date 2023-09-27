@@ -1,66 +1,68 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using NovinCommerce.Entities.Companies;
-using NovinCommerce.Models.Companies;
-using NovinCommerce.Repositories.Companies;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using NovinCommerce.Entities.Companies;
+using NovinCommerce.Models.Companies;
 using NovinCommerce.Permissions;
+using NovinCommerce.Repositories.Companies;
 using Volo.Abp.Application.Services;
 
-namespace NovinCommerce.Services.Companies
+namespace NovinCommerce.Services.Companies;
+
+[Authorize(NovinCommercePermissions.Companies.Default)]
+public class CompanyAppService : ApplicationService, ICompanyAppService
 {
-    [Authorize(NovinCommercePermissions.Companies.Default)]
-    public class CompanyAppService : ApplicationService, ICompanyAppService
+    private readonly ICompanyRepository _companyRepository;
+
+    public CompanyAppService(ICompanyRepository companyRepository)
     {
-        private readonly ICompanyRepository _companyRepository;
+        _companyRepository = companyRepository;
+    }
 
-        public CompanyAppService(ICompanyRepository companyRepository) => _companyRepository = companyRepository;
+    [Authorize(NovinCommercePermissions.Companies.Create)]
+    public async Task<CompanyDto> CreateAsync(CompanyDto inputCompany)
+    {
+        var company = new Company(inputCompany.Title, inputCompany.Description);
 
-        [Authorize(NovinCommercePermissions.Companies.Create)]
-        public async Task<CompanyDto> CreateAsync(CompanyDto inputCompany)
-        {
-            var company = new Company(inputCompany.Title, inputCompany.Description);
+        await _companyRepository.InsertAsync(company);
 
-            await _companyRepository.InsertAsync(company);
+        return inputCompany;
+    }
 
-            return inputCompany;
-        }
+    [Authorize(NovinCommercePermissions.Companies.Delete)]
+    public async Task DeleteAsync(Guid companyId)
+    {
+        var company = await _companyRepository.GetByIdAsync(companyId);
 
-        [Authorize(NovinCommercePermissions.Companies.Delete)]
-        public async Task DeleteAsync(Guid companyId)
-        {
-            var company = await _companyRepository.GetByIdAsync(companyId);
+        await _companyRepository.DeleteAsync(company);
+    }
 
-            await _companyRepository.DeleteAsync(company);
-        }
+    public async ValueTask<IEnumerable<CompanyDto>> GetAllAsync()
+    {
+        var companies = await _companyRepository.GetListAsync();
 
-        public async ValueTask<IEnumerable<CompanyDto>> GetAllAsync()
-        {
-            var companies = await _companyRepository.GetListAsync();
+        var outputCompanies =
+            companies.Select<Company, CompanyDto>(c => new CompanyDto { Title = c.Title, Description = c.Description });
 
-            var outputCompanies = companies.Select<Company, CompanyDto>(c => new CompanyDto { Title = c.Title, Description = c.Description });
+        return outputCompanies;
+    }
 
-            return outputCompanies;
-        }
+    public async ValueTask<CompanyDto> GetByIdAsync(Guid companyId)
+    {
+        var company = await _companyRepository.GetByIdAsync(companyId);
 
-        public async ValueTask<CompanyDto> GetByIdAsync(Guid companyId)
-        {
-            var company = await _companyRepository.GetByIdAsync(companyId);
+        var outputCompany = new CompanyDto { Title = company.Title, Description = company.Description };
 
-            var outputCompany = new CompanyDto { Title = company.Title, Description = company.Description };
+        return outputCompany;
+    }
 
-            return outputCompany;
-        }
+    [Authorize(NovinCommercePermissions.Companies.Edit)]
+    public async Task UpdateAsync(Guid companyId, CompanyDto inputCompany)
+    {
+        var company = await _companyRepository.GetByIdAsync(companyId);
 
-        [Authorize(NovinCommercePermissions.Companies.Edit)]
-        public async Task UpdateAsync(Guid companyId, CompanyDto inputCompany)
-        {
-            var company = await _companyRepository.GetByIdAsync(companyId);
-
-            company.Update(inputCompany.Title, inputCompany.Description);
-        }
+        company.Update(inputCompany.Title, inputCompany.Description);
     }
 }
