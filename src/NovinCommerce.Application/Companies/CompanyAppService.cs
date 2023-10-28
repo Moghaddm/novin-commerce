@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using NovinCommerce.Companies;
 using NovinCommerce.Entities.Companies;
 using NovinCommerce.Models.Companies;
 using NovinCommerce.Permissions;
 using NovinCommerce.Repositories.Companies;
 using Volo.Abp.Application.Services;
+using Volo.Abp.Domain.Entities.Caching;
+using Volo.Abp.Domain.Repositories;
 
 namespace NovinCommerce.Services.Companies;
 
@@ -15,16 +18,29 @@ namespace NovinCommerce.Services.Companies;
 public class CompanyAppService : ApplicationService, ICompanyAppService
 {
     private readonly ICompanyRepository _companyRepository;
+    private readonly IEntityCache<Company, Guid> _companyCache;
+    private readonly CompanyInputDtoMapper _companyInputDtoMapper;
+    private readonly CompanyOutputDtoMapper _companyOutputDtoMapper;
+    private readonly CompanyListOutputDtoMapper _companyListOutputDtoMapper;
 
-    public CompanyAppService(ICompanyRepository companyRepository)
+    public CompanyAppService(
+        ICompanyRepository companyRepository,
+        IEntityCache<Company, Guid> companyCache,
+        CompanyOutputDtoMapper companyOutputDtoMapper,
+            CompanyInputDtoMapper companyInputDtoMapper,
+        CompanyListOutputDtoMapper companyListOutputDtoMapper)
     {
+        _companyCache = companyCache;
         _companyRepository = companyRepository;
+        _companyInputDtoMapper = companyInputDtoMapper;
+        _companyOutputDtoMapper = companyOutputDtoMapper;
+        _companyListOutputDtoMapper = companyListOutputDtoMapper;
     }
 
     [Authorize(NovinCommercePermissions.Companies.Create)]
     public async Task<CompanyDto> CreateAsync(CompanyDto inputCompany)
     {
-        var company = new Company(inputCompany.Title, inputCompany.Description);
+        var company = _companyInputDtoMapper.Map(inputCompany);
 
         await _companyRepository.InsertAsync(company);
 
@@ -43,17 +59,20 @@ public class CompanyAppService : ApplicationService, ICompanyAppService
     {
         var companies = await _companyRepository.GetListAsync();
 
-        var outputCompanies =
-            companies.Select<Company, CompanyDto>(c => new CompanyDto { Title = c.Title, Description = c.Description });
+        companies = companies ?? await _companyRepository.GetListAsync();
+
+        var outputCompanies = _companyListOutputDtoMapper.Map(companies);
 
         return outputCompanies;
     }
 
     public async ValueTask<CompanyDto> GetByIdAsync(Guid companyId)
     {
-        var company = await _companyRepository.GetByIdAsync(companyId);
+        var company = await _companyCache.GetAsync(companyId);
 
-        var outputCompany = new CompanyDto { Title = company.Title, Description = company.Description };
+        company = company ?? await _companyRepository.GetByIdAsync(companyId);
+
+        var outputCompany = _companyOutputDtoMapper.Map(company);
 
         return outputCompany;
     }

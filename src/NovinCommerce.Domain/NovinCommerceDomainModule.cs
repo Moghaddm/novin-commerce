@@ -1,9 +1,13 @@
+using System;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using NovinCm.ProductManagement;
+using NovinCommerce.Entities.Companies;
 using NovinCommerce.MultiTenancy;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
+using Volo.Abp.Domain.Entities.Caching;
 using Volo.Abp.Emailing;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -64,5 +68,12 @@ public class NovinCommerceDomainModule : AbpModule
 #if DEBUG
         context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());
 #endif
+
+        context.Services.AddEntityCache<Company, Guid>(new DistributedCacheEntryOptions
+        {
+            AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(30),
+            SlidingExpiration = TimeSpan.FromMinutes(50),
+            AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1)
+        });
     }
 }
